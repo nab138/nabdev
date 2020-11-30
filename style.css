@@ -8,16 +8,16 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     text-decoration: none;
     color: #FFFFFF;
-    background-color: #ed8c0c
+    background-color: #ED8C0C
 }
 
 .button {
     width:81px;
     height:25px;
-    background-color: #000A4F;
+    background-color: #FF970D;
     border: #6E84D4;
     color: white;
-    padding: 8px 20px;
+    padding: 4px 12px;
     text-align: center;
     text-decoration: none;
     align-items: center;
