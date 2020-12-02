@@ -29,6 +29,7 @@ body {
     border: 2px solid #f866ff;
     align-items: center;
     margin: 15px;
+    line-height: 0;
 }
 
 .button:hover{
