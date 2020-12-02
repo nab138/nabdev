@@ -13,7 +13,7 @@ body {
 
 .button {
     width:81px;
-    height:25px;
+    height:0;
     background-color: #fdd4ff;
     border: #6E84D4;
     color: white;
