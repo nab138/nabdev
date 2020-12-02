@@ -16,14 +16,13 @@ body {
     height:25px;
     background-color: #fdd4ff;
     border: #6E84D4;
-    color: white;
+    display: inline-flex;
     padding: 8px 20px;
     padding-bottom: 5px;
     padding-top: 5px;
     text-align: center;
     text-decoration: none;
     align-items: center;
-    display: inline-block;
     font-size: 16px;
     border-radius: 18px;
     transition: 0.25s;
