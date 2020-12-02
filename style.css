@@ -52,3 +52,7 @@ body h2{
 body {
     margin: 0;
   }
+img {
+  border-radius: 50%;
+      border: 5px solid #15004a;
+}
