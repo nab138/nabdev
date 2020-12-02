@@ -26,7 +26,7 @@ body {
     border-radius: 18px;
     transition: 0.25s;
     cursor: pointer;
-    border: 2px solid #f246cd;
+    border: 2px solid #f866ff;
     align-items: center;
     margin: 15px;
 }
@@ -36,14 +36,14 @@ body {
 }
 
 body h1{
-    color: #FFFFFF;
+    color: #000000;
 }
 
 body h3{
-    color: #c7c7c7;
+    color: #424242;
 }
 body h4{
-    color: #858585;
+    color: #6b6b6b;
 }
 body h2{
     color: #A8A8A8;
