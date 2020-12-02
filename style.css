@@ -18,6 +18,8 @@ body {
     border: #6E84D4;
     color: white;
     padding: 8px 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     text-align: center;
     text-decoration: none;
     align-items: center;
@@ -29,7 +31,6 @@ body {
     border: 2px solid #f866ff;
     align-items: center;
     margin: 15px;
-    line-height: 25;
 }
 
 .button:hover{
