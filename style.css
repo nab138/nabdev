@@ -13,7 +13,7 @@ body {
 
 .button {
     width:81px;
-    height:0;
+    height:25px;
     background-color: #fdd4ff;
     border: #6E84D4;
     color: white;
@@ -29,7 +29,7 @@ body {
     border: 2px solid #f866ff;
     align-items: center;
     margin: 15px;
-    line-height: 0;
+    line-height: 25;
 }
 
 .button:hover{
