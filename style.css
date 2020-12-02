@@ -18,7 +18,7 @@ body {
     border: #6E84D4;
     color: white;
     display: inline-flex;
-    text-align: center;
+    justify-content: center;
     text-decoration: none;
     align-items: center;
     font-size: 16px;
