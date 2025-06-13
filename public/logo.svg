@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" xmlns:bx="https://boxy-svg.com" width="140px" height="140px">
+  <defs>
+    <bx:export>
+      <bx:file format="svg" path="Dozer.svg"/>
+    </bx:export>
+    <style bx:fonts="Audiowide">@import url(https://fonts.googleapis.com/css2?family=Audiowide%3Aital%2Cwght%400%2C400&amp;display=swap);</style>
+  </defs>
+  <rect width="80" height="100" rx="6" ry="6" style="stroke: rgb(0, 0, 0); transform-origin: 70px 70px 0px; stroke-width: 0px; fill: rgb(54, 60, 235);" x="30" y="20">
+    <title>Body</title>
+  </rect>
+  <rect x="25" width="90" height="10" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(45, 45, 46);" y="10"/>
+  <rect x="24" y="26.5" width="8" height="27" rx="6" ry="6" style="stroke: rgb(0, 0, 0); fill: rgb(45, 45, 46); stroke-width: 0px;"/>
+  <rect x="24" y="56.5" width="8" height="27" rx="6" ry="6" style="stroke: rgb(0, 0, 0); fill: rgb(45, 45, 46); stroke-width: 0px;"/>
+  <rect x="24" y="86.5" width="8" height="27" rx="6" ry="6" style="stroke: rgb(0, 0, 0); fill: rgb(45, 45, 46); stroke-width: 0px;"/>
+  <rect x="108" y="26.5" width="8" height="27" rx="6" ry="6" style="stroke: rgb(0, 0, 0); fill: rgb(45, 45, 46); stroke-width: 0px;"/>
+  <rect x="108" y="56.5" width="8" height="27" rx="6" ry="6" style="stroke: rgb(0, 0, 0); fill: rgb(45, 45, 46); stroke-width: 0px;"/>
+  <rect x="108" y="86.5" width="8" height="27" rx="6" ry="6" style="stroke: rgb(0, 0, 0); fill: rgb(45, 45, 46); stroke-width: 0px;"/>
+  <text style="fill: rgb(45, 45, 46); font-family: &quot;Audiowide&quot;; font-size: 46px; white-space: pre;" x="37.9" y="86.167">nd</text>
+</svg>
