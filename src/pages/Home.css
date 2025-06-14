@@ -34,9 +34,11 @@
 
 .home-content-container {
   z-index: 2;
-  background-color: aliceblue;
+  background-image: radial-gradient(#372549, 75%, #1a1423 90%, #000 100%);
   width: min(80%, 800px);
   height: min(50%, 500px);
   border-radius: 1rem;
-  box-shadow: 10px 10px 5px red;
+  box-shadow: 0 0 10px 10px #0007;
+  display: flex;
+  justify-content: center;
 }
