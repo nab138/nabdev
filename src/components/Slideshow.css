@@ -1,0 +1,156 @@
+.slide-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: none;
+  z-index: 1;
+}
+
+.slide-anim-in,
+.slide-anim-out {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.slide-anim-in.slide-right {
+  transform: translateX(100%);
+  animation: slideInFromRight 0.5s forwards;
+}
+.slide-anim-in.slide-left {
+  transform: translateX(-100%);
+  animation: slideInFromLeft 0.5s forwards;
+}
+.slide-anim-out.slide-right {
+  transform: translateX(0);
+  animation: slideOutToLeft 0.5s forwards;
+}
+.slide-anim-out.slide-left {
+  transform: translateX(0);
+  animation: slideOutToRight 0.5s forwards;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.slide-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-controls {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  top: 0;
+  bottom: 0;
+}
+
+.slide-controls button {
+  border-radius: 50%;
+  background-color: transparent;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #e5e5e550;
+  opacity: 0.5;
+  transition: opacity 0.1s;
+}
+
+.slide-controls button:hover {
+  background-color: #0005;
+  opacity: 0.8;
+}
+
+.slide-controls button:active {
+  opacity: 1;
+}
+
+.slide-controls button:disabled {
+  color: inherit;
+  cursor: not-allowed;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide-transition {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-right {
+  transform: translateX(0);
+  animation: slideInRight 0.5s;
+}
+
+.slide-left {
+  transform: translateX(0);
+  animation: slideInLeft 0.5s;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
