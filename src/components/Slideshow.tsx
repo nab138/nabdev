@@ -81,6 +81,9 @@ export default function Slideshow({
           <button onClick={handlePrev} disabled={isAnimating}>{`<`}</button>
           <button onClick={handleNext} disabled={isAnimating}>{`>`}</button>
         </div>
+        <div className="slide-info-box">
+          
+        </div>
       </div>
     </div>
   );

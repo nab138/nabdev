@@ -4,6 +4,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-slide-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
 
 .home-slide-container {
@@ -16,4 +34,9 @@
 
 .home-content-container {
   z-index: 2;
+  background-color: aliceblue;
+  width: min(80%, 800px);
+  height: min(50%, 500px);
+  border-radius: 1rem;
+  box-shadow: 10px 10px 5px red;
 }
