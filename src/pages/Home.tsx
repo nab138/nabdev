@@ -15,7 +15,7 @@ export default function Home() {
               name: p.name,
               desc: p.short,
               image: p.image,
-              link: "/" + p.id,
+              link: "/projects/" + p.id,
             };
           })}
           isBackground

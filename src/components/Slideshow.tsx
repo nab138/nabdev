@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import "./Slideshow.css";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function Slideshow({
   slides,
@@ -20,24 +22,27 @@ export default function Slideshow({
   const [direction, setDirection] = useState<"left" | "right" | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const timeoutRef = useRef<number | null>(null);
+  const navigate = useNavigate();
 
-  const handlePrev = useCallback(() => {
-    if (isAnimating) return;
-    setDirection("left");
-    setPrevSlide(curSlide);
-    setCurSlide((old) => {
-      const next = (old - 1 + slides.length) % slides.length;
-      setIsAnimating(true);
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-      timeoutRef.current = setTimeout(() => {
-        setPrevSlide(null);
-        setIsAnimating(false);
-      }, 500);
-      return next;
-    });
-  }, [isAnimating, curSlide]);
+  const toSlide = useCallback(
+    (index: number) => {
+      if (isAnimating || curSlide == index) return;
+      setDirection(curSlide > index ? "left" : "right");
+      setPrevSlide(curSlide);
+      setCurSlide(() => {
+        setIsAnimating(true);
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        timeoutRef.current = setTimeout(() => {
+          setPrevSlide(null);
+          setIsAnimating(false);
+        }, 500);
+        return index;
+      });
+    },
+    [isAnimating, curSlide]
+  );
 
-  const handleNext = useCallback(() => {
+  const toNext = useCallback(() => {
     if (isAnimating) return;
     setDirection("right");
     setPrevSlide(curSlide);
@@ -54,9 +59,35 @@ export default function Slideshow({
   }, [isAnimating, curSlide]);
 
   useEffect(() => {
-    const slideChange = setInterval(handleNext, autoSwitchTime);
+    const slideChange = setInterval(toNext, autoSwitchTime);
     return () => clearInterval(slideChange);
-  }, [handleNext]);
+  }, [toNext]);
+
+  let SlideContent = ({ index }: { index: number }) => {
+    return (
+      <>
+        <img
+          src={slides[index].image}
+          alt={slides[index].name}
+          className={"slide-img" + (isBackground ? " slide-bg-img" : "")}
+          loading={index === curSlide ? "eager" : "lazy"}
+        />
+
+        <div
+          className="slide-info-box"
+          onClick={() => {
+            navigate(slides[index].link);
+          }}
+        >
+          <div className="slide-info-header">
+            <FaExternalLinkAlt size={18} />
+            <h3>{slides[index].name}</h3>
+          </div>
+          <p>{slides[index].desc}</p>
+        </div>
+      </>
+    );
+  };
 
   return (
     <div className="slideshow-container">
@@ -66,12 +97,7 @@ export default function Slideshow({
             className={`slide slide-anim-out slide-${direction}`}
             key={prevSlide}
           >
-            <img
-              src={slides[prevSlide].image}
-              alt={slides[prevSlide].name}
-              className="slide-img"
-              loading={prevSlide === 0 ? "eager" : "lazy"}
-            />
+            <SlideContent index={prevSlide} />
           </div>
         )}
         <div
@@ -80,14 +106,17 @@ export default function Slideshow({
           }`}
           key={curSlide}
         >
-          <img
-            src={slides[curSlide].image}
-            alt={slides[curSlide].name}
-            className={"slide-img" + (isBackground ? " slide-bg-img" : "")}
-            loading={curSlide === 0 ? "eager" : "lazy"}
-          />
+          <SlideContent index={curSlide} />
         </div>
-        <div className="slide-info-box"></div>
+      </div>
+      <div className="slide-circles">
+        {slides.map((_, i) => (
+          <div
+            key={i}
+            className={`slide-circle${i == curSlide ? " active-slide" : ""}`}
+            onClick={() => toSlide(i)}
+          />
+        ))}
       </div>
     </div>
   );

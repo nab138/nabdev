@@ -16,4 +16,10 @@
   color: var(--color);
   text-align: center;
   white-space: nowrap;
+  transition: background-color 0.1s;
+}
+
+.link-btn:hover {
+  color: var(--color);
+  background-color: #000f;
 }

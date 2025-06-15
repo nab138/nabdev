@@ -14,7 +14,7 @@ export type Project = {
 const projects: Project[] = [
   {
     name: "Shrinkwrap",
-    short: "Multipurpose app for FRC robotics software",
+    short: "Multipurpose app for FRC robotics",
     image: "shrinkwrap.png",
     urls: [
       {
@@ -25,8 +25,8 @@ const projects: Project[] = [
     id: "shrinkwrap",
   },
   {
-    name: "test",
-    short: "Multipurpose test robotics software",
+    name: "Dawg",
+    short: "What da dog doin?",
     image: "test.png",
     urls: [
       {
@@ -34,7 +34,7 @@ const projects: Project[] = [
         url: "https://github.com/nab138/shrinkwrap",
       },
     ],
-    id: "shrinkwrap",
+    id: "dawg",
   },
 ];
 
