@@ -1,3 +1,5 @@
+import { shuffleArray } from "./utils";
+
 export type Project = {
   name: string;
   short: string;
@@ -37,7 +39,3 @@ const projects: Project[] = [
 ];
 
 export default shuffleArray(projects);
-
-function shuffleArray<T>(array: T[]): T[] {
-  return array.sort(() => Math.random() - 0.5);
-}

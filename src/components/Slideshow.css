@@ -76,41 +76,8 @@
   height: 100%;
 }
 
-.slide-controls {
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  left: 2px;
-  right: 2px;
-  top: 0;
-  bottom: 0;
-}
-
-.slide-controls button {
-  border-radius: 50%;
-  background-color: transparent;
-  font-weight: bold;
-  width: 50px;
-  height: 50px;
-  border: 2px solid #e5e5e550;
-  opacity: 0.5;
-  transition: opacity 0.1s;
-}
-
-.slide-controls button:hover {
-  background-color: #0005;
-  opacity: 0.8;
-}
-
-.slide-controls button:active {
-  opacity: 1;
-}
-
-.slide-controls button:disabled {
-  color: inherit;
-  cursor: not-allowed;
+.slide-bg-img {
+  filter: blur(3px);
 }
 
 .slideshow-container {

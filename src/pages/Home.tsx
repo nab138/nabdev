@@ -1,6 +1,9 @@
-import projects from "../projects";
+import projects from "../utils/projects";
 import "./Home.css";
 import Slideshow from "../components/Slideshow";
+import Typewriter from "../components/Typewriter";
+import languages from "../utils/languages";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -15,10 +18,31 @@ export default function Home() {
               link: "/" + p.id,
             };
           })}
+          isBackground
+          autoSwitchTime={8000}
         />
       </div>
       <span className="home-content-container">
         <h1 className="logo">nabdev</h1>
+        <Typewriter options={languages} />
+        <div className="home-button-container">
+          <Link to="/about" className="link-btn">
+            About
+          </Link>
+          <Link to="/about" className="link-btn">
+            My Projects
+          </Link>
+          <Link to="/about" className="link-btn">
+            Contact
+          </Link>
+          <Link
+            to="https://github.com/nab138"
+            target="_blank"
+            className="link-btn"
+          >
+            Github
+          </Link>
+        </div>
       </span>
     </div>
   );

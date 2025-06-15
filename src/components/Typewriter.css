@@ -1,0 +1,29 @@
+.typewriter {
+  font-size: 4.5rem;
+  height: 5rem;
+
+  text-shadow: var(--shadow);
+}
+
+.typewriter-cursor {
+  background-color: var(--color);
+  width: 6px;
+  height: 100%;
+  animation: blink 1s steps(1) infinite;
+}
+
+.typewriter-container {
+  display: flex;
+  gap: 5px;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
