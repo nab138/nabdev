@@ -17,6 +17,7 @@
   text-align: center;
   white-space: nowrap;
   transition: background-color 0.1s;
+  user-select: none;
 }
 
 .link-btn:hover {
