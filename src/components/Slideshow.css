@@ -177,7 +177,7 @@
 
 .slide-info-box {
   position: absolute;
-  top: 2rem;
+  bottom: 2rem;
   left: 2rem;
   z-index: 3;
   background-color: #0005;
@@ -207,8 +207,14 @@
 
 @media screen and (max-width: 600px) {
   .slide-info-box {
-    top: 1rem;
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 600px) and (max-height: 600px) {
+  .slide-info-box {
+    display: none;
   }
 }

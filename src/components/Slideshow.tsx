@@ -7,6 +7,7 @@ export default function Slideshow({
   slides,
   isBackground,
   autoSwitchTime,
+  setCurSlide: setCurSlideP,
 }: {
   slides: {
     name: string;
@@ -16,6 +17,7 @@ export default function Slideshow({
   }[];
   isBackground: boolean;
   autoSwitchTime: number;
+  setCurSlide?: (index: number) => void;
 }) {
   const [curSlide, setCurSlide] = useState<number>(0);
   const [prevSlide, setPrevSlide] = useState<number | null>(null);
@@ -62,6 +64,10 @@ export default function Slideshow({
     const slideChange = setInterval(toNext, autoSwitchTime);
     return () => clearInterval(slideChange);
   }, [toNext]);
+
+  useEffect(() => {
+    if (setCurSlideP) setCurSlideP(curSlide);
+  }, [curSlide, setCurSlideP]);
 
   let SlideContent = ({ index }: { index: number }) => {
     return (

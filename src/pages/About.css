@@ -1,0 +1,18 @@
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-header {
+  white-space: nowrap;
+}
+
+.about-header h1,
+.about-header h2 {
+  margin: 0;
+}
+
+.about-header h2 {
+  filter: brightness(0.8);
+}

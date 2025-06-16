@@ -1,18 +1,29 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { useRef } from "react";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/404";
+import SlideshowBg from "./pages/SlideshowBg";
+import Header from "./pages/Header";
 
 function App() {
+  const containerRef = useRef<HTMLSpanElement | null>(null);
+
   return (
-    <>
+    <Header containerRef={containerRef}>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<SlideshowBg containerRef={containerRef} />}>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
         <Route path="/projects" element={<Projects />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </Header>
   );
 }
 
