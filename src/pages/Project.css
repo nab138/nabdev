@@ -1,0 +1,9 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem 2rem;
+}
+
+.project-container h1 {
+  margin-left: 6rem;
+}

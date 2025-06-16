@@ -3,6 +3,9 @@ import { shuffleArray } from "./utils";
 export type Project = {
   name: string;
   short: string;
+  long?: string;
+  points?: string[];
+  pointsTitle?: string;
   image: string;
   urls: {
     label: string;

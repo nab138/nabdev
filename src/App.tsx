@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/404";
 import SlideshowBg from "./pages/SlideshowBg";
 import Header from "./pages/Header";
+import Project from "./pages/Project";
 
 function App() {
   const containerRef = useRef<HTMLSpanElement | null>(null);
@@ -17,10 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={<SlideshowBg containerRef={containerRef} />}>
           <Route index element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:projectId" element={<Project />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Header>

@@ -1,6 +1,6 @@
 import projects from "../utils/projects";
 import "./Projects.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
 export default function Projects() {
@@ -15,6 +15,7 @@ export default function Projects() {
       : undefined;
   const fsRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (transitionProject) {
@@ -52,7 +53,7 @@ export default function Projects() {
       {transitionProject && !hideOverlay && (
         <div className="project-fs" ref={fsRef} style={fsStyle}>
           <img
-            src={transitionProject.image}
+            src={"/" + transitionProject.image}
             alt={transitionProject.name}
             className="project-fs-img"
           />
@@ -79,9 +80,12 @@ export default function Projects() {
                 ? { visibility: "hidden" }
                 : undefined
             }
+            onClick={() => {
+              navigate("/projects/" + project.id);
+            }}
           >
             <img
-              src={project.image}
+              src={"/" + project.image}
               alt={project.name}
               className="project-image"
             />

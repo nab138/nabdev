@@ -1,8 +1,11 @@
 .projects-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 1rem;
+  padding: 0.8rem 2rem;
+}
+
+.projects-container h1 {
+  margin-left: 6rem;
 }
 
 .projects-content {
@@ -10,7 +13,6 @@
   flex-wrap: wrap;
   gap: 1rem;
   width: 100%;
-  justify-content: center;
 }
 
 .project-card {
