@@ -14,7 +14,12 @@ export default function Header({
 
   return (
     <>
-      <div className="logo-container">
+      <div
+        style={{
+          zIndex: 9999,
+        }}
+        className="logo-container"
+      >
         <img
           className="logo-img"
           src={dozer}
