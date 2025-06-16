@@ -77,6 +77,10 @@
   user-select: none;
 }
 
+.slide-contain {
+  object-fit: contain !important;
+}
+
 .slide-bg-img {
   filter: blur(3px);
 }

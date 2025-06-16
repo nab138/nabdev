@@ -16,7 +16,7 @@
 }
 
 .project-card {
-  width: min(90%, 600px);
+  min-width: min(90%, 500px);
   height: 300px;
   position: relative;
   border-radius: 0.5rem;
@@ -24,6 +24,8 @@
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   user-select: none;
+  flex: 1 1 0px;
+  overflow: hidden;
 }
 
 .project-card:hover {

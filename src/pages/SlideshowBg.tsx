@@ -21,7 +21,7 @@ export default function SlideshowBg({
             return {
               name: p.name,
               desc: p.short,
-              image: p.image,
+              image: "/" + p.images[0],
               link: "/projects/" + p.id,
             };
           })}

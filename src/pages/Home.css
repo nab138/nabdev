@@ -7,6 +7,8 @@
   column-gap: 50px;
 }
 
-.home-button-container > a {
-  width: 6rem;
+.home-button-container button,
+.home-button-container a {
+  width: 8rem;
+  box-sizing: border-box;
 }

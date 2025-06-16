@@ -53,7 +53,7 @@ export default function Projects() {
       {transitionProject && !hideOverlay && (
         <div className="project-fs" ref={fsRef} style={fsStyle}>
           <img
-            src={"/" + transitionProject.image}
+            src={"/" + transitionProject.images[0]}
             alt={transitionProject.name}
             className="project-fs-img"
           />
@@ -85,7 +85,7 @@ export default function Projects() {
             }}
           >
             <img
-              src={"/" + project.image}
+              src={"/" + project.images[0]}
               alt={project.name}
               className="project-image"
             />

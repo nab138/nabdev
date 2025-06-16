@@ -24,7 +24,7 @@
   justify-content: center;
   text-shadow: var(--shadow);
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.25s;
@@ -51,12 +51,12 @@
   width: 4rem;
   rotate: 10deg;
   transition: all 0.3s;
-  box-shadow: var(--shadow);
+  filter: drop-shadow(var(--shadow));
   cursor: pointer;
 }
 
 .logo-img:hover {
-  transform: translate(1px, -8px);
+  transform: translate(0, -8px);
 }
 
 .invisible {

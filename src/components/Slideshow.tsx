@@ -7,6 +7,7 @@ export default function Slideshow({
   slides,
   isBackground,
   autoSwitchTime,
+  contain,
   setCurSlide: setCurSlideP,
 }: {
   slides: {
@@ -17,13 +18,14 @@ export default function Slideshow({
   }[];
   isBackground: boolean;
   autoSwitchTime: number;
+  contain?: boolean;
   setCurSlide?: (index: number) => void;
 }) {
   const [curSlide, setCurSlide] = useState<number>(0);
   const [prevSlide, setPrevSlide] = useState<number | null>(null);
   const [direction, setDirection] = useState<"left" | "right" | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
-  const timeoutRef = useRef<number | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const navigate = useNavigate();
 
   const toSlide = useCallback(
@@ -61,6 +63,7 @@ export default function Slideshow({
   }, [isAnimating, curSlide]);
 
   useEffect(() => {
+    if (slides.length <= 1) return;
     const slideChange = setInterval(toNext, autoSwitchTime);
     return () => clearInterval(slideChange);
   }, [toNext]);
@@ -75,22 +78,28 @@ export default function Slideshow({
         <img
           src={slides[index].image}
           alt={slides[index].name}
-          className={"slide-img" + (isBackground ? " slide-bg-img" : "")}
+          className={
+            "slide-img" +
+            (isBackground ? " slide-bg-img" : "") +
+            (contain ? " slide-contain" : "")
+          }
           loading={index === curSlide ? "eager" : "lazy"}
         />
 
-        <div
-          className="slide-info-box"
-          onClick={() => {
-            navigate(slides[index].link);
-          }}
-        >
-          <div className="slide-info-header">
-            <FaExternalLinkAlt size={18} />
-            <h3>{slides[index].name}</h3>
+        {slides[index].name && (
+          <div
+            className="slide-info-box"
+            onClick={() => {
+              navigate(slides[index].link);
+            }}
+          >
+            <div className="slide-info-header">
+              <FaExternalLinkAlt size={18} />
+              <h3>{slides[index].name}</h3>
+            </div>
+            <p>{slides[index].desc}</p>
           </div>
-          <p>{slides[index].desc}</p>
-        </div>
+        )}
       </>
     );
   };
@@ -115,15 +124,17 @@ export default function Slideshow({
           <SlideContent index={curSlide} />
         </div>
       </div>
-      <div className="slide-circles">
-        {slides.map((_, i) => (
-          <div
-            key={i}
-            className={`slide-circle${i == curSlide ? " active-slide" : ""}`}
-            onClick={() => toSlide(i)}
-          />
-        ))}
-      </div>
+      {slides.length > 1 && (
+        <div className="slide-circles">
+          {slides.map((_, i) => (
+            <div
+              key={i}
+              className={`slide-circle${i == curSlide ? " active-slide" : ""}`}
+              onClick={() => toSlide(i)}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
