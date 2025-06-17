@@ -1,0 +1,26 @@
+name: Deploy to Server
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Build
+        run: bun install --frozen-lockfile && bun run build
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftp.alexidk.dev
+          username: u301880030.nabdev.me
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./dist/
+          server-dir: public_html/
+          dry-run: true
