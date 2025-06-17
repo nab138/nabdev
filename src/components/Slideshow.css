@@ -82,7 +82,7 @@
 }
 
 .slide-bg-img {
-  filter: blur(3px);
+  filter: blur(4px) brightness(0.85);
 }
 
 .slideshow-container {

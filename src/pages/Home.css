@@ -5,10 +5,21 @@
   grid-template-rows: 1fr 1fr;
   row-gap: 20px;
   column-gap: 50px;
+  margin-bottom: 5rem;
 }
 
 .home-button-container button,
 .home-button-container a {
   width: 8rem;
   box-sizing: border-box;
+}
+
+.home-container {
+  text-align: center;
+}
+
+@media screen and (max-height: 500px) {
+  .home-button-container {
+    margin-bottom: 0;
+  }
 }

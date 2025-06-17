@@ -38,6 +38,7 @@ export default function Projects() {
             transition: "all 0.6s cubic-bezier(0.4,0,0.2,1)",
             zIndex: 10,
             backgroundColor: "#201c1c",
+            filter: "blur(1px)",
           });
           setTimeout(() => {
             setHideOverlay(true);
