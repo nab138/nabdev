@@ -21,7 +21,7 @@ const projects: Project[] = [
     short: "Multipurpose app for FRC robotics",
     long: "Shrinkwrap is a cross-platform diagnostic, configuration, and tuning utility for FRC robotics. While it provides a few generic features, it contains mostly specialized tools for specific softwares.",
     points: [
-      "Supports windows, macos, linux, ios, and android",
+      "Supports Windows, macOS, Linux, iOS, and Android",
       "Fully configurable and exportable docking layout",
       "Connect to a robot in real time or load a log file",
       "Visualize data on a 2D or 3D field",
@@ -31,7 +31,7 @@ const projects: Project[] = [
     ],
     pointsTitle: "Features",
     techStack: ["Bun", "Vite", "Rust", "Tauri", "TypeScript", "React"],
-    images: ["shrinkwrap.png"],
+    images: ["shrinkwrap.png", "shrinkwrap2.png", "shrinkwrap3.png"],
     links: [
       {
         label: "GitHub",
@@ -161,7 +161,40 @@ const projects: Project[] = [
         url: "https://github.com/nab138/Oxidation",
       },
       {
+        label: "Shrinkwrap",
+        url: "/projects/shrinkwrap",
+      },
+      {
         label: "2025 3044 Robot Code (Fully automated w/ Oxidation)",
+        url: "https://github.com/frcteam3044/2025swervebase",
+      },
+    ],
+    id: "oxidation",
+  },
+  {
+    name: "OxConfig",
+    short: "Real-time configuration and tuning for FRC robots",
+    long: "OxConfig is a real-time configuration and tuning utility for FRC robots. It allows users to configure and tune various parameters of their robot in real-time without having to redeploy code.",
+    pointsTitle: "Features",
+    points: [
+      "Cross-platform editing with Shrinkwrap",
+      "Supports configurable classes for tuning controllers, subsystems, and more",
+      "Real-time updates without even having to disable the robot",
+      "Pre-configured modes to quickly get your robot ready for competition, presentations, etc.",
+    ],
+    techStack: ["Java", "Gradle", "WPILib"],
+    images: ["oxconfig.png"],
+    links: [
+      {
+        label: "Github",
+        url: "https://github.com/FRCTeam3044/OxConfig",
+      },
+      {
+        label: "Shrinkwrap",
+        url: "/projects/shrinkwrap",
+      },
+      {
+        label: "2025 3044 Robot Code (Uses OxConfig)",
         url: "https://github.com/frcteam3044/2025swervebase",
       },
     ],
