@@ -14,6 +14,12 @@ import {
   SiGithubactions,
   SiTauri,
   SiGradle,
+  SiDeno,
+  SiVercel,
+  SiBun,
+  SiVite,
+  SiRender,
+  SiGithubpages,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa6";
 import { type IconType } from "react-icons";
@@ -41,6 +47,13 @@ const techIconMap: { [key: string]: IconType } = {
   "github actions": SiGithubactions,
   tauri: SiTauri,
   gradle: SiGradle,
+  deno: SiDeno,
+  denokv: SiDeno,
+  vercel: SiVercel,
+  bun: SiBun,
+  vite: SiVite,
+  render: SiRender,
+  "github pages": SiGithubpages,
 };
 
 const customIcons: { [key: string]: React.FC<{ size?: number }> } = {
