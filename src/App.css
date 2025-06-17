@@ -18,9 +18,12 @@
   white-space: nowrap;
   transition: background-color 0.1s;
   user-select: none;
+  /* get rid of blue border when hovering */
+  outline: none;
 }
 
 .link-btn:hover {
   color: var(--color);
   background-color: #000f;
+  border: none;
 }

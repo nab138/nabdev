@@ -30,6 +30,11 @@
   width: 100%;
   transform: translateX(-50%);
   transition: opacity 0.25s;
+  pointer-events: none;
+}
+
+.slideshow-bg-content-container > * {
+  pointer-events: auto;
 }
 
 .slideshow-bg-content-container h1 {
