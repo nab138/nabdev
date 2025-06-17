@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import dozer from "../assets/logo.svg";
 import { transition } from "../utils/NavigationProvider";
+import { useEffect, useState } from "react";
 
 export default function Header({
   children,
@@ -11,6 +12,18 @@ export default function Header({
 }) {
   const navigate = useNavigate();
   const location = useLocation();
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => {
+    const firstVisit = localStorage.getItem("firstVisit");
+    if (!firstVisit) {
+      localStorage.setItem("firstVisit", "true");
+      setTimeout(() => {
+        setModalOpen(true);
+      }, 1000);
+    }
+  }, []);
 
   return (
     <>
@@ -27,6 +40,19 @@ export default function Header({
           onClick={() => transition("/", containerRef, navigate, location)}
         />
       </div>
+      {modalOpen && (
+        <div className="welcome-modal">
+          <div className="welcome-modal-content">
+            <h2>⚠️ Under Construction!</h2>
+            <p>
+              This site is currently under construction. You may encounter bugs,
+              placeholder images or text, missing projects, and other unfinished
+              elements.
+            </p>
+            <button onClick={() => setModalOpen(false)}>I understand</button>
+          </div>
+        </div>
+      )}
       {children}
     </>
   );
