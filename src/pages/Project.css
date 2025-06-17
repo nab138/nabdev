@@ -78,3 +78,9 @@
   flex-direction: row;
   column-gap: 1.5rem;
 }
+
+.project-links-list a {
+  white-space: normal;
+  text-align: left;
+  width: fit-content;
+}

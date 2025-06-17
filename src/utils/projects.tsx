@@ -37,6 +37,14 @@ const projects: Project[] = [
         label: "GitHub",
         url: "https://github.com/nab138/shrinkwrap",
       },
+      {
+        label: "OxConfig",
+        url: "/projects/oxconfig",
+      },
+      {
+        label: "Oxidation",
+        url: "/projects/oxidation",
+      },
     ],
 
     id: "shrinkwrap",
@@ -53,7 +61,7 @@ const projects: Project[] = [
       "Supports robots of any size",
     ],
     techStack: ["Java", "Gradle", "WPILib"],
-    images: ["test.png"],
+    images: ["oxplorer.png", "oxplorer-banner.png"],
     links: [
       {
         label: "GitHub",
@@ -65,14 +73,16 @@ const projects: Project[] = [
   {
     name: "Java Course",
     short: "Virtual summer course to teach beginners Java",
-    long: "A virtual online summer class taught by me to teach Java to beginners. The course is designed for anyone regardless of prior programming experience, and it covers the basics of Java programming, object-oriented programming concepts, and more. All course materials were created by me and a mentor of FRC Team 3044.",
+    long: "A virtual online summer class taught by me to teach Java to beginners. The course is designed for anyone regardless of prior programming experience, and it covers the basics of Java programming, object-oriented programming concepts, and more. (Note: The CAD Course featured in the poster was inspired by this course, but was not created by me.)",
     pointsTitle: "Course Highlights",
     points: [
-      "Open to anyone, regardless of age or prior programming experience",
+      "Open to anyone for free, regardless of age or prior programming experience",
       "700+ Slides",
       "2, 1-hour virtual classes per week",
       "Live coding sessions on a custom-made web platform, allowing all students to attempt exercises and get feedback from teachers in real-time.",
       "Projects in context of FRC to end the course",
+      "Live Office hours for students to ask questions",
+      "All course materials were created by me and a mentor of FRC Team 3044",
     ],
     techStack: [
       "Java",
@@ -83,10 +93,15 @@ const projects: Project[] = [
       "Render",
       "Github Pages",
     ],
-    images: ["java-course.png"],
+    images: [
+      "javacourse0.png",
+      "javacourse2.png",
+      "javacourse1.png",
+      "javacourse3.png",
+    ],
     links: [
       {
-        label: "Live Coding Platform Github",
+        label: "Live Coding Github",
         url: "https://github.com/nab138/JavaCourseLive",
       },
       {
@@ -109,7 +124,13 @@ const projects: Project[] = [
       "Runs on cloud or raspberry pi",
     ],
     techStack: ["Typescript", "React", "Next.js", "DenoKV", "Vercel"],
-    images: ["freetime.png"],
+    images: [
+      "freetime1.png",
+      "freetime2.png",
+      "freetime3.png",
+      "freetime4.png",
+      "freetime5.png",
+    ],
     links: [
       {
         label: "Github",
@@ -138,6 +159,10 @@ const projects: Project[] = [
       {
         label: "Github",
         url: "https://github.com/nab138/Oxidation",
+      },
+      {
+        label: "2025 3044 Robot Code (Fully automated w/ Oxidation)",
+        url: "https://github.com/frcteam3044/2025swervebase",
       },
     ],
     id: "oxidation",
