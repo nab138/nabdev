@@ -9,6 +9,7 @@ import {
 
 interface NavigationContextProps {
   navigate: (path: string, noAnimation?: boolean) => void;
+  finishTransition: () => void;
 }
 
 const NavigationContext = createContext<NavigationContextProps | undefined>(
@@ -29,7 +30,6 @@ export const transition = (
   }
   containerRef.current.classList.add("invisible");
   setTimeout(() => {
-    containerRef.current!.classList.remove("invisible");
     nav(to, { state });
   }, 250);
 };
@@ -53,8 +53,14 @@ export function NavigationProvider({
     [nav, containerRef, location.pathname, state]
   );
 
+  const finishTransition = useCallback(() => {
+    if (containerRef.current) {
+      containerRef.current.classList.remove("invisible");
+    }
+  }, [containerRef]);
+
   return (
-    <NavigationContext.Provider value={{ navigate }}>
+    <NavigationContext.Provider value={{ navigate, finishTransition }}>
       {children}
     </NavigationContext.Provider>
   );

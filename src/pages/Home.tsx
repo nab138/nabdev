@@ -2,9 +2,14 @@ import "./Home.css";
 import Typewriter from "../components/Typewriter";
 import languages from "../utils/languages";
 import { useTransitionNav } from "../utils/NavigationProvider";
+import { useEffect } from "react";
 
 export default function Home() {
-  const { navigate } = useTransitionNav();
+  const { navigate, finishTransition } = useTransitionNav();
+
+  useEffect(() => {
+    finishTransition();
+  }, [finishTransition]);
 
   return (
     <>
