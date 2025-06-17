@@ -7,6 +7,11 @@
   overflow: auto;
 }
 
+.about-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .about-header {
   padding: 1rem;
 }
@@ -47,11 +52,9 @@
 @media screen and (max-width: 800px) {
   .about-container {
     text-align: center;
-  }
-}
-
-@media screen and (max-height: 1000px) and (max-width: 1000px) {
-  .about-container {
     padding-top: 5rem;
+  }
+  .about-buttons {
+    flex-direction: column;
   }
 }

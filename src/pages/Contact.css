@@ -10,3 +10,9 @@
 .contact-list {
   font-size: large;
 }
+
+.contact-btn {
+  min-width: calc(100% - 1rem);
+  flex-grow: 1;
+  margin: 0.5rem;
+}

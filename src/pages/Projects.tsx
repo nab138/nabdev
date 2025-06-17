@@ -1,6 +1,6 @@
 import projects from "../utils/projects";
 import "./Projects.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
 export default function Projects() {
@@ -64,7 +64,12 @@ export default function Projects() {
           </div>
         </div>
       )}
-      <h1>My Projects</h1>
+      <div className="projects-header">
+        <h1>My Projects</h1>
+        <Link to="/">
+          <h3>Back to home</h3>
+        </Link>
+      </div>
       <div className="projects-content">
         {projects.map((project, idx) => (
           <div

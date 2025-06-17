@@ -25,7 +25,7 @@ let technologies = [
 ];
 
 export default function About() {
-  const { finishTransition } = useTransitionNav();
+  const { navigate, finishTransition } = useTransitionNav();
 
   useEffect(() => {
     finishTransition();
@@ -51,6 +51,17 @@ export default function About() {
           </li>
           <li>I make silly things for fun ;)</li>
         </ul>
+        <div className="about-buttons">
+          <button onClick={() => navigate("/")} className="link-btn">
+            Home
+          </button>
+          <button
+            onClick={() => navigate("/projects", true)}
+            className="link-btn"
+          >
+            Projects
+          </button>
+        </div>
       </div>
       <div className="technologies">
         {technologies.map((tech) => (

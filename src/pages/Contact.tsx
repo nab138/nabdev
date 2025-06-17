@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useTransitionNav } from "../utils/NavigationProvider";
 
 export default function Contact() {
-  const { finishTransition } = useTransitionNav();
+  const { navigate, finishTransition } = useTransitionNav();
 
   useEffect(() => {
     finishTransition();
@@ -31,6 +31,9 @@ export default function Contact() {
           <b>Discord</b>: nab138
         </li>
       </ul>
+      <button onClick={() => navigate("/")} className="link-btn contact-btn">
+        Home
+      </button>
     </div>
   );
 }
