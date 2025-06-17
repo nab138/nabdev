@@ -4,21 +4,24 @@ import { useTransitionNav } from "../utils/NavigationProvider";
 import "./About.css";
 
 let technologies = [
-  "React",
+  "HTML",
+  "CSS",
   "JavaScript",
   "TypeScript",
+  "React",
+  "Next.js",
+  "PostgreSQL",
   "Rust",
   "Tauri",
-  "HTML5",
-  "CSS3",
   "Python",
   "Kotlin",
   "Java",
+  "Gradle",
+  "WPILib",
   "Swift",
-  "PostgreSQL",
   "Git",
   "GitHub Actions",
-  "Next.js",
+  "C#",
 ];
 
 export default function About() {
@@ -37,12 +40,16 @@ export default function About() {
           I'm a high school student who loves working on various software
           development projects.
         </p>
-        <ul>
-          <li>I work on projects to support my FRC robotics team, 3044</li>
+        <ul className="about-list">
           <li>
-            I build mobile apps, websites, and other tools both for fun and
-            function
+            I work on projects, tools, and educational resources to support my
+            FRC robotics team, 3044
           </li>
+          <li>
+            I build mobile apps, websites, and other utilities to serve a
+            purpose for myself and others
+          </li>
+          <li>I make silly things for fun ;)</li>
         </ul>
       </div>
       <div className="technologies">

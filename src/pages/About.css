@@ -9,8 +9,6 @@
 
 .about-header {
   padding: 1rem;
-  background-color: #0007;
-  border-radius: 0.5rem;
 }
 
 .about-header h1,
@@ -19,6 +17,10 @@
 }
 .about-header h2 {
   filter: brightness(0.8);
+}
+
+.about-list {
+  text-align: left;
 }
 
 .technologies {
