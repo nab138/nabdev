@@ -56,7 +56,7 @@ export default function Project() {
           className="link"
           onClick={() => navigate(isMini ? "/mini-projects" : "/projects")}
         >
-          <h3>{isMini ? "Mini" : "All"} Projects</h3>
+          <h2>{isMini ? "Mini" : "All"} Projects</h2>
         </button>
       </div>
       <div className="project-content">

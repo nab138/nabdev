@@ -11,8 +11,9 @@
   margin-top: 1.5rem;
   margin-bottom: 0;
 }
-.projects-header h3 {
+.projects-header h2 {
   margin-top: 0;
+  font-size: larger;
 }
 .projects-content {
   display: flex;

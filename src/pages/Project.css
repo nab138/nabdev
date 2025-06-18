@@ -13,8 +13,9 @@
   margin-bottom: 0;
 }
 
-.project-header h3 {
+.project-header h2 {
   margin-top: 0;
+  font-size: larger;
 }
 
 .project-content {

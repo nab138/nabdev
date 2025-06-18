@@ -95,7 +95,7 @@ export default function Projects() {
       <div className="projects-header">
         <h1>{isMini ? "Mini" : "My"} Projects</h1>
         <button className="link" onClick={() => navigate("/")}>
-          <h3>Back to home</h3>
+          <h2>Back to home</h2>
         </button>
       </div>
       <div className="projects-content">
