@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import TechIcon from "../components/TechIcon";
 import { useTransitionNav } from "../utils/NavigationProvider";
 import "./About.css";
+import { Helmet } from "@dr.pogodin/react-helmet";
 
 let technologies = [
   "HTML",
@@ -33,6 +34,19 @@ export default function About() {
 
   return (
     <div className="about-container">
+      <Helmet>
+        <title>About - nabdev</title>
+        <meta
+          name="description"
+          content="Learn more about Nick, his background, and skills."
+        />
+        <meta property="og:url" content="https://nabdev.me/about" />
+        <meta property="og:title" content="About - nabdev" />
+        <meta
+          property="og:description"
+          content="Learn more about Nick, his background, and skills."
+        />
+      </Helmet>
       <div className="about-header">
         <h2>About Me</h2>
         <h1>Hi, I'm Nick.</h1>

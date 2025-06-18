@@ -1,6 +1,7 @@
 import "./Contact.css";
 import { useEffect } from "react";
 import { useTransitionNav } from "../utils/NavigationProvider";
+import { Helmet } from "@dr.pogodin/react-helmet";
 
 export default function Contact() {
   const { navigate, finishTransition } = useTransitionNav();
@@ -11,6 +12,13 @@ export default function Contact() {
 
   return (
     <div className="contact-container">
+      <Helmet>
+        <title>Contact - nabdev</title>
+        <meta name="description" content="Get in touch with Nick." />
+        <meta property="og:url" content="https://nabdev.me/contact" />
+        <meta property="og:title" content="Contact - nabdev" />
+        <meta property="og:description" content="Get in touch with Nick." />
+      </Helmet>
       <div>
         <h1>Contact</h1>
         <h2>I can't wait to hear from you!</h2>

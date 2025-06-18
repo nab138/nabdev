@@ -40,7 +40,6 @@ export default function Header({
         <Logo
           className="logo-img"
           onClick={() => {
-            console.log(isMain, containerRef2, containerRef);
             (isMain ? containerRef2 : containerRef).current?.classList.add(
               "invisible"
             );

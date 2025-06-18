@@ -3,6 +3,7 @@ import Typewriter from "../components/Typewriter";
 import languages from "../utils/languages";
 import { useTransitionNav } from "../utils/NavigationProvider";
 import { useEffect } from "react";
+import { Helmet } from "@dr.pogodin/react-helmet";
 
 export default function Home() {
   const { navigate, finishTransition } = useTransitionNav();
@@ -13,6 +14,19 @@ export default function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Home - nabdev</title>
+        <meta
+          name="description"
+          content="Learn more about Nicholas Sharp, his background, and skills."
+        />
+        <meta property="og:url" content="https://nabdev.me" />
+        <meta property="og:title" content="Home - nabdev" />
+        <meta
+          property="og:description"
+          content="Learn more about Nicholas Sharp, his background, and skills."
+        />
+      </Helmet>
       <h1 className="logo">nabdev</h1>
       <Typewriter options={languages} />
       <div className="home-button-container">

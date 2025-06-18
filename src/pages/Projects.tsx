@@ -3,6 +3,7 @@ import "./Projects.css";
 import { useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useTransitionNav } from "../utils/NavigationProvider";
+import { Helmet } from "@dr.pogodin/react-helmet";
 
 export default function Projects() {
   const location = useLocation();
@@ -59,6 +60,25 @@ export default function Projects() {
 
   return (
     <div className="projects-container" style={{ position: "relative" }}>
+      <Helmet>
+        <title>{isMini ? "Mini " : ""}Projects - nabdev</title>
+        <meta
+          name="description"
+          content="Explore Nick's various projects, including pictures, descriptions, and links to live demos or source code."
+        />
+        <meta
+          property="og:url"
+          content={`https://nabdev.me/${isMini ? "mini-" : ""}projects`}
+        />
+        <meta
+          property="og:title"
+          content={`${isMini ? "Mini " : ""}Projects - nabdev`}
+        />
+        <meta
+          property="og:description"
+          content="Explore Nick's various projects, including pictures, descriptions, and links to live demos or source code."
+        />
+      </Helmet>
       {transitionProject && !hideOverlay && (
         <div className="project-fs" ref={fsRef} style={fsStyle}>
           <img

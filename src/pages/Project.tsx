@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Slideshow from "../components/Slideshow";
 import TechIcon from "../components/TechIcon";
 import { useTransitionNav } from "../utils/NavigationProvider";
+import { Helmet } from "@dr.pogodin/react-helmet";
 
 export default function Project() {
   const location = useLocation();
@@ -31,6 +32,24 @@ export default function Project() {
 
   return (
     <div className="project-container">
+      <Helmet>
+        <title>{project.name} - nabdev</title>
+        <meta
+          name="description"
+          content={`Info about ${project.name}: ${project.short}`}
+        />
+        <meta
+          property="og:url"
+          content={`https://nabdev.me/${isMini ? "mini-" : ""}projects/${
+            project.id
+          }`}
+        />
+        <meta property="og:title" content={`${project.name} - nabdev`} />
+        <meta
+          property="og:description"
+          content={`Info about ${project.name}: ${project.short}`}
+        />
+      </Helmet>
       <div className="project-header">
         <h1>{project?.name}</h1>
         <button

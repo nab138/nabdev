@@ -122,6 +122,7 @@ export const mainProjects: Project[] = shuffleArray([
       "Import rosters from CSV files",
       "Results editor to fix mistakes",
       "Runs on cloud or raspberry pi",
+      "Used to time the 2024 Malta Trail Race",
     ],
     techStack: ["Typescript", "React", "Next.js", "DenoKV", "Vercel"],
     images: [
