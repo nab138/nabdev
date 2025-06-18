@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import dozer from "../assets/logo.svg";
+import Logo from "../assets/logo.svg?react";
 import { transition } from "../utils/NavigationProvider";
 import { useEffect, useState } from "react";
 
@@ -33,10 +33,8 @@ export default function Header({
         }}
         className="logo-container"
       >
-        <img
+        <Logo
           className="logo-img"
-          src={dozer}
-          alt="Dozer"
           onClick={() => transition("/", containerRef, navigate, location)}
         />
       </div>
