@@ -31,7 +31,7 @@ export const mainProjects: Project[] = shuffleArray([
     ],
     pointsTitle: "Features",
     techStack: ["Bun", "Vite", "Rust", "Tauri", "TypeScript", "React"],
-    images: ["shrinkwrap.png", "shrinkwrap2.png", "shrinkwrap3.png"],
+    images: ["shrinkwrap.webp", "shrinkwrap2.webp", "shrinkwrap3.webp"],
     links: [
       {
         label: "GitHub",
@@ -61,7 +61,7 @@ export const mainProjects: Project[] = shuffleArray([
       "Supports robots of any size",
     ],
     techStack: ["Java", "Gradle", "WPILib"],
-    images: ["oxplorer.png", "oxplorer-banner.png"],
+    images: ["oxplorer.webp", "oxplorer-banner.webp"],
     links: [
       {
         label: "GitHub",
@@ -94,10 +94,10 @@ export const mainProjects: Project[] = shuffleArray([
       "Github Pages",
     ],
     images: [
-      "javacourse0.png",
-      "javacourse2.png",
-      "javacourse1.png",
-      "javacourse3.png",
+      "javacourse0.webp",
+      "javacourse2.webp",
+      "javacourse1.webp",
+      "javacourse3.webp",
     ],
     links: [
       {
@@ -126,11 +126,11 @@ export const mainProjects: Project[] = shuffleArray([
     ],
     techStack: ["Typescript", "React", "Next.js", "DenoKV", "Vercel"],
     images: [
-      "freetime1.png",
-      "freetime2.png",
-      "freetime3.png",
-      "freetime4.png",
-      "freetime5.png",
+      "freetime1.webp",
+      "freetime2.webp",
+      "freetime3.webp",
+      "freetime4.webp",
+      "freetime5.webp",
     ],
     links: [
       {
@@ -155,7 +155,7 @@ export const mainProjects: Project[] = shuffleArray([
       "Optional Quality-of-life features such as automatic driverstation mode transitions",
     ],
     techStack: ["Java", "Gradle", "WPILib"],
-    images: ["oxidation.png"],
+    images: ["oxidation.webp"],
     links: [
       {
         label: "Github",
@@ -184,7 +184,7 @@ export const mainProjects: Project[] = shuffleArray([
       "Pre-configured modes to quickly get your robot ready for competition, presentations, etc.",
     ],
     techStack: ["Java", "Gradle", "WPILib"],
-    images: ["oxconfig.png"],
+    images: ["oxconfig.webp"],
     links: [
       {
         label: "Github",
@@ -215,7 +215,7 @@ export const miniProjects: Project[] = shuffleArray([
     ],
     pointsTitle: "Features",
     techStack: ["Bun", "Vite", "TypeScript", "React"],
-    images: ["apple-music.png"],
+    images: ["apple-music.webp"],
     links: [
       {
         label: "GitHub",
@@ -241,10 +241,10 @@ export const miniProjects: Project[] = shuffleArray([
     pointsTitle: "Features",
     techStack: ["Ionic", "Vite", "TypeScript", "React"],
     images: [
-      "programmar1.png",
-      "programmar2.png",
-      "programmar3.png",
-      "programmar4.png",
+      "programmar1.webp",
+      "programmar2.webp",
+      "programmar3.webp",
+      "programmar4.webp",
     ],
     links: [
       {
@@ -267,10 +267,10 @@ export const miniProjects: Project[] = shuffleArray([
     pointsTitle: "Features",
     techStack: ["Swift", "Theos"],
     images: [
-      "gearglimpse1.png",
-      "gearglimpse2.png",
-      "gearglimpse3.png",
-      "gearglimpse4.png",
+      "gearglimpse1.webp",
+      "gearglimpse2.webp",
+      "gearglimpse3.webp",
+      "gearglimpse4.webp",
     ],
     links: [
       {
