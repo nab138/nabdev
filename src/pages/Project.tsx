@@ -1,14 +1,15 @@
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import "./Project.css";
 import { mainProjects, miniProjects } from "../utils/projects";
 import { useEffect } from "react";
 import Slideshow from "../components/Slideshow";
 import TechIcon from "../components/TechIcon";
+import { useTransitionNav } from "../utils/NavigationProvider";
 
 export default function Project() {
   const location = useLocation();
   const params = useParams();
-  const navigate = useNavigate();
+  const { navigate, finishTransition } = useTransitionNav();
   const isMini = location.pathname.includes("mini-projects");
   const project = (isMini ? miniProjects : mainProjects).find(
     (p) => p.id === params.projectId
@@ -20,6 +21,10 @@ export default function Project() {
     }
   }, [project, navigate]);
 
+  useEffect(() => {
+    finishTransition();
+  }, [finishTransition]);
+
   if (!project) {
     return null;
   }
@@ -28,9 +33,12 @@ export default function Project() {
     <div className="project-container">
       <div className="project-header">
         <h1>{project?.name}</h1>
-        <Link to={isMini ? "/mini-projects" : "/projects"}>
+        <button
+          className="link"
+          onClick={() => navigate(isMini ? "/mini-projects" : "/projects")}
+        >
           <h3>{isMini ? "Mini" : "All"} Projects</h3>
-        </Link>
+        </button>
       </div>
       <div className="project-content">
         <div className="project-slides">

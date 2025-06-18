@@ -6,12 +6,16 @@ import { useEffect, useState } from "react";
 export default function Header({
   children,
   containerRef,
+  containerRef2,
 }: {
   children?: React.ReactNode;
   containerRef: React.RefObject<HTMLSpanElement | null>;
+  containerRef2: React.RefObject<HTMLDivElement | null>;
 }) {
   const navigate = useNavigate();
   const location = useLocation();
+  const isMain = ["/", "/about", "/contact"].includes(location.pathname);
+  const realContainerRef = isMain ? containerRef : containerRef2;
 
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -35,7 +39,13 @@ export default function Header({
       >
         <Logo
           className="logo-img"
-          onClick={() => transition("/", containerRef, navigate, location)}
+          onClick={() => {
+            console.log(isMain, containerRef2, containerRef);
+            (isMain ? containerRef2 : containerRef).current?.classList.add(
+              "invisible"
+            );
+            transition("/", realContainerRef, navigate, location);
+          }}
         />
       </div>
       {modalOpen && (

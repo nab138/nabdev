@@ -1,7 +1,8 @@
 import { mainProjects, miniProjects } from "../utils/projects";
 import "./Projects.css";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { useTransitionNav } from "../utils/NavigationProvider";
 
 export default function Projects() {
   const location = useLocation();
@@ -18,7 +19,11 @@ export default function Projects() {
       : undefined;
   const fsRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const navigate = useNavigate();
+  const { navigate, finishTransition } = useTransitionNav();
+
+  useEffect(() => {
+    finishTransition();
+  }, [finishTransition]);
 
   useEffect(() => {
     if (transitionProject && !isMini) {
@@ -69,9 +74,9 @@ export default function Projects() {
       )}
       <div className="projects-header">
         <h1>{isMini ? "Mini" : "My"} Projects</h1>
-        <Link to="/">
+        <button className="link" onClick={() => navigate("/")}>
           <h3>Back to home</h3>
-        </Link>
+        </button>
       </div>
       <div className="projects-content">
         {projects.map((project, idx) => (

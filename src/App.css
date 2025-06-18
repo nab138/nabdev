@@ -51,3 +51,25 @@
   margin: 20px;
   max-width: 500px;
 }
+
+.container {
+  transition: opacity 0.25s;
+}
+
+.link {
+  background-color: transparent;
+  color: #7c88f7;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+*:focus {
+  outline: 0 !important;
+}
