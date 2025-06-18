@@ -117,8 +117,8 @@ export default function Projects() {
             <h1>{isMini ? "Main" : "Mini"} Projects</h1>
             <h2>
               {isMini
-                ? "Larger, high effort projects with a greater degree of polish"
-                : "Small or fun projects that didn't quite make the main cut!"}
+                ? "See some larger, high effort projects with a greater degree of polish"
+                : "See some small, fun, or unfinished projects that didn't quite make the main cut"}
             </h2>
           </div>
         </div>

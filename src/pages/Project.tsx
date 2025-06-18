@@ -9,9 +9,10 @@ export default function Project() {
   const location = useLocation();
   const params = useParams();
   const navigate = useNavigate();
-  const project = (
-    location.pathname.includes("mini-projects") ? miniProjects : mainProjects
-  ).find((p) => p.id === params.projectId);
+  const isMini = location.pathname.includes("mini-projects");
+  const project = (isMini ? miniProjects : mainProjects).find(
+    (p) => p.id === params.projectId
+  );
 
   useEffect(() => {
     if (!project) {
@@ -27,8 +28,8 @@ export default function Project() {
     <div className="project-container">
       <div className="project-header">
         <h1>{project?.name}</h1>
-        <Link to="/projects">
-          <h3>All Projects</h3>
+        <Link to={isMini ? "/mini-projects" : "/projects"}>
+          <h3>{isMini ? "Mini" : "All"} Projects</h3>
         </Link>
       </div>
       <div className="project-content">

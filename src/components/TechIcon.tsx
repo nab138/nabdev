@@ -20,10 +20,12 @@ import {
   SiVite,
   SiRender,
   SiGithubpages,
+  SiIonic,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa6";
 import { type IconType } from "react-icons";
-import wpilib from "../assets/wpilib-icon.svg";
+import WPILib from "../assets/wpilib-icon.svg?react";
+import theos from "../assets/theos-2.png";
 
 const techIconMap: { [key: string]: IconType } = {
   javascript: SiJavascript,
@@ -54,12 +56,14 @@ const techIconMap: { [key: string]: IconType } = {
   vite: SiVite,
   render: SiRender,
   "github pages": SiGithubpages,
+  ionic: SiIonic,
 };
 
 const customIcons: { [key: string]: React.FC<{ size?: number }> } = {
   csharp: CSharpIcon,
   "c#": CSharpIcon,
   wpilib: WPILibIcon,
+  theos: TheosIcon,
 };
 
 export default function TechIcon({
@@ -86,13 +90,25 @@ export default function TechIcon({
 
 export function WPILibIcon({ size = 24 }: { size?: number }) {
   return (
-    <img
-      src={wpilib}
-      alt="WPILib"
+    <WPILib
       style={{
         width: size,
         height: size,
         filter: "grayscale(1) brightness(100)",
+      }}
+    />
+  );
+}
+
+export function TheosIcon({ size = 24 }: { size?: number }) {
+  return (
+    <img
+      src={theos}
+      alt="Theos"
+      style={{
+        width: size,
+        height: size,
+        filter: "grayscale(1) invert()",
       }}
     />
   );

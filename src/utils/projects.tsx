@@ -206,6 +206,7 @@ export const miniProjects: Project[] = shuffleArray([
   {
     name: "Apple Music Frontend",
     short: "Alternative Apple Music web frontend",
+    long: "The Apple Music web frontend is buggy, laggy, and missing some stuff. The same can be said for this frontend, but at least its my jank, not Apple's",
     points: [
       "Supports live lyrics powered by LRC LIB",
       "Uses MusicKit to access Apple Music API",
@@ -226,5 +227,60 @@ export const miniProjects: Project[] = shuffleArray([
     ],
 
     id: "apple-music",
+  },
+  {
+    name: "ProGrammar",
+    short: "Duolingo-style programming language learning app",
+    long: "Mobile app to learn programming languages in a Duolingo-style format. It provides interactive lessons, quizzes, and projects to help users learn programming languages effectively. The app itself is almost fully functional, just missing real content.",
+    points: [
+      "Data-driven courses",
+      "Custom lesson builder app to create courses",
+      "Interactive project-based learning framework",
+    ],
+    pointsTitle: "Features",
+    techStack: ["Ionic", "Vite", "TypeScript", "React"],
+    images: [
+      "programmar1.png",
+      "programmar2.png",
+      "programmar3.png",
+      "programmar4.png",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/nab138/ProGrammar",
+      },
+    ],
+    id: "programmar",
+  },
+  {
+    name: "GearGlimpseRevolution",
+    short: "FRC AR Tools for iOS!",
+    long: "Connect to a real robot or a simulator and visualize the robot on an AR field.",
+    points: [
+      "Custom robot models",
+      "Small-scale or life size field",
+      "Transparent, translucent, or opaque robot",
+      "WIP AprilTag Alignment to place AR robot on a real field (got detection working, but not alignment yet)",
+    ],
+    pointsTitle: "Features",
+    techStack: ["Swift", "Theos"],
+    images: [
+      "gearglimpse1.png",
+      "gearglimpse2.png",
+      "gearglimpse3.png",
+      "gearglimpse4.png",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/nab138/GearGlimpseRevolution",
+      },
+      {
+        label: "Altstore Source",
+        url: "https://tinyurl.com/gearglimpsesource",
+      },
+    ],
+    id: "gearglimpse",
   },
 ]);
