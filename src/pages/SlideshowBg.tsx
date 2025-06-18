@@ -1,4 +1,4 @@
-import projects from "../utils/projects";
+import { mainProjects } from "../utils/projects";
 import "./SlideshowBg.css";
 import Slideshow from "../components/Slideshow";
 import { Outlet } from "react-router-dom";
@@ -17,7 +17,7 @@ export default function SlideshowBg({
       <div className="slideshow-bg-slide-container">
         <Slideshow
           setCurSlide={setCurSlide}
-          slides={projects.map((p) => {
+          slides={mainProjects.map((p) => {
             return {
               name: p.name,
               desc: p.short,

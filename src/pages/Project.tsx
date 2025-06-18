@@ -1,14 +1,17 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import "./Project.css";
-import projects from "../utils/projects";
+import { mainProjects, miniProjects } from "../utils/projects";
 import { useEffect } from "react";
 import Slideshow from "../components/Slideshow";
 import TechIcon from "../components/TechIcon";
 
 export default function Project() {
+  const location = useLocation();
   const params = useParams();
   const navigate = useNavigate();
-  const project = projects.find((p) => p.id === params.projectId);
+  const project = (
+    location.pathname.includes("mini-projects") ? miniProjects : mainProjects
+  ).find((p) => p.id === params.projectId);
 
   useEffect(() => {
     if (!project) {

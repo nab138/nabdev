@@ -1,10 +1,13 @@
-import projects from "../utils/projects";
+import { mainProjects, miniProjects } from "../utils/projects";
 import "./Projects.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
 export default function Projects() {
   const location = useLocation();
+
+  const isMini = location.pathname.includes("mini-projects");
+  const projects = isMini ? miniProjects : mainProjects;
   const [animating, setAnimating] = useState(false);
   const [hideOverlay, setHideOverlay] = useState(false);
   const [fsStyle, setFsStyle] = useState<any>({});
@@ -18,7 +21,7 @@ export default function Projects() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (transitionProject) {
+    if (transitionProject && !isMini) {
       setAnimating(true);
       setHideOverlay(false);
       setFsStyle({});
@@ -65,7 +68,7 @@ export default function Projects() {
         </div>
       )}
       <div className="projects-header">
-        <h1>My Projects</h1>
+        <h1>{isMini ? "Mini" : "My"} Projects</h1>
         <Link to="/">
           <h3>Back to home</h3>
         </Link>
@@ -87,7 +90,9 @@ export default function Projects() {
                 : undefined
             }
             onClick={() => {
-              navigate("/projects/" + project.id);
+              navigate(
+                (isMini ? "/mini-projects/" : "/projects/") + project.id
+              );
             }}
           >
             <img
@@ -101,6 +106,22 @@ export default function Projects() {
             </div>
           </div>
         ))}
+
+        <div
+          className={`project-card`}
+          onClick={() => {
+            navigate(`/${isMini ? "projects" : "mini-projects"}`);
+          }}
+        >
+          <div className="mini-projects">
+            <h1>{isMini ? "Main" : "Mini"} Projects</h1>
+            <h2>
+              {isMini
+                ? "Larger, high effort projects with a greater degree of polish"
+                : "Small or fun projects that didn't quite make the main cut!"}
+            </h2>
+          </div>
+        </div>
       </div>
     </div>
   );

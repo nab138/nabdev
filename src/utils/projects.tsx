@@ -15,7 +15,7 @@ export type Project = {
   id: string;
 };
 
-const projects: Project[] = [
+export const mainProjects: Project[] = shuffleArray([
   {
     name: "Shrinkwrap",
     short: "Multipurpose app for FRC robotics",
@@ -198,8 +198,33 @@ const projects: Project[] = [
         url: "https://github.com/frcteam3044/2025swervebase",
       },
     ],
-    id: "oxidation",
+    id: "oxconfig",
   },
-];
+]);
 
-export default shuffleArray(projects);
+export const miniProjects: Project[] = shuffleArray([
+  {
+    name: "Apple Music Frontend",
+    short: "Alternative Apple Music web frontend",
+    points: [
+      "Supports live lyrics powered by LRC LIB",
+      "Uses MusicKit to access Apple Music API",
+      "Incredibly basic functionality",
+    ],
+    pointsTitle: "Features",
+    techStack: ["Bun", "Vite", "TypeScript", "React"],
+    images: ["apple-music.png"],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/nab138/apple-music",
+      },
+      {
+        label: "Live Demo",
+        url: "https://music.nabdev.me",
+      },
+    ],
+
+    id: "apple-music",
+  },
+]);

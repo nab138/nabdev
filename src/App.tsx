@@ -23,6 +23,8 @@ function App() {
         </Route>
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:projectId" element={<Project />} />
+        <Route path="/mini-projects" element={<Projects />} />
+        <Route path="/mini-projects/:projectId" element={<Project />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Header>

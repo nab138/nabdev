@@ -51,6 +51,7 @@
 
 .logo-img {
   width: 4rem;
+  margin-top: -0.6rem;
   rotate: 10deg;
   transition: all 0.3s;
   filter: drop-shadow(var(--shadow));
