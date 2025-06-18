@@ -95,6 +95,9 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .mini-projects h1 {
