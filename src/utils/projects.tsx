@@ -75,7 +75,7 @@ export const mainProjects: Project[] = shuffleArray([
         url: "https://github.com/FRCTeam3044/Oxplorer/wiki",
       },
       {
-        label: "JavaDoc",
+        label: "Javadoc",
         url: "https://frcteam3044.github.io/Oxplorer/",
       },
       {
@@ -224,7 +224,7 @@ export const mainProjects: Project[] = shuffleArray([
         url: "https://github.com/FRCTeam3044/OxConfig/wiki",
       },
       {
-        label: "JavaDoc",
+        label: "Javadoc",
         url: "https://frcteam3044.github.io/OxConfig/",
       },
       {
@@ -233,6 +233,46 @@ export const mainProjects: Project[] = shuffleArray([
       },
     ],
     id: "oxconfig",
+  },
+  {
+    name: "YCode",
+    id: "ycode",
+    images: [
+      "ycode0.webp",
+      "ycode1.webp",
+      "ycode2.webp",
+      "ycode3.webp",
+      "ycode4.webp",
+    ],
+    short: "An (in progress) iOS IDE for windows and linux",
+    long: "WORK IN PROGRESS! XCode is only available for mac, but I can't afford one. So I made my own. YCode aims to make developing native iOS apps easy on any platform. It is still very early in development but does have it's core functionality working.",
+    pointsTitle: "Features",
+    points: [
+      "Multi-platform support (Windows, Linux, and maybe mac in the future)",
+      "Supports logging in with your Apple ID to sign apps",
+      "Lets you view and manage certificates and app IDs",
+      "Supports building and installing apps on your device with completely rust sideloading code(right now using theos to build, but currently is transitioning to using swift package manager)",
+      "Uses monaco editor for code editing",
+      "Project templates to get you started quickly",
+      "Will eventually integrate sourcekit-lsp for code completion and other features",
+    ],
+    techStack: [
+      "Bun",
+      "TypeScript",
+      "React",
+      "Vite",
+      "Joy UI",
+      "Rust",
+      "Tauri",
+      "Theos",
+      "Swift",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/nab138/YCode",
+      },
+    ],
   },
 ]);
 
