@@ -55,17 +55,32 @@ export const mainProjects: Project[] = shuffleArray([
     long: "A versatile pathfinder for FRC robotics that enables real-time obstacle avoidance features and quick path generation.",
     pointsTitle: "Features",
     points: [
+      "Obstacles loaded from a JSON file (or, experimentally, accepted in real-time)",
       "Uses A* search algorithm",
+      "Uses bezier curves for smooth paths",
       "Fully configurable path constraints",
       "Supports modifiers for time or condition based obstacles",
       "Supports robots of any size",
+      "Fast enough to be used in real-time (Able to run just fine during the 20ms FRC loop in a complex codebase)",
     ],
     techStack: ["Java", "Gradle", "WPILib"],
     images: ["oxplorer.webp", "oxplorer-banner.webp"],
     links: [
       {
         label: "GitHub",
-        url: "https://github.com/frcteam3044/oxplorer",
+        url: "https://github.com/FRCTeam3044/Oxplorer",
+      },
+      {
+        label: "Wiki",
+        url: "https://github.com/FRCTeam3044/Oxplorer/wiki",
+      },
+      {
+        label: "JavaDoc",
+        url: "https://frcteam3044.github.io/Oxplorer/",
+      },
+      {
+        label: "Discord",
+        url: "https://discord.com/invite/ypRWZGnW66",
       },
     ],
     id: "oxplorer",
@@ -88,9 +103,10 @@ export const mainProjects: Project[] = shuffleArray([
       "Java",
       "Bun",
       "Vite",
-      "Typescript",
+      "TypeScript",
       "React",
-      "Render",
+      "Express",
+      "WebSockets",
       "Github Pages",
     ],
     images: [
@@ -123,8 +139,9 @@ export const mainProjects: Project[] = shuffleArray([
       "Results editor to fix mistakes",
       "Runs on cloud or raspberry pi",
       "Used to time the 2024 Malta Trail Race",
+      "My first commercial project",
     ],
-    techStack: ["Typescript", "React", "Next.js", "DenoKV", "Vercel"],
+    techStack: ["TypeScript", "React", "Next.js", "DenoKV", "Vercel"],
     images: [
       "freetime1.webp",
       "freetime2.webp",
@@ -166,7 +183,7 @@ export const mainProjects: Project[] = shuffleArray([
         url: "/projects/shrinkwrap",
       },
       {
-        label: "2025 3044 Robot Code (Fully automated w/ Oxidation)",
+        label: "Example Codebase",
         url: "https://github.com/frcteam3044/2025swervebase",
       },
     ],
@@ -195,8 +212,24 @@ export const mainProjects: Project[] = shuffleArray([
         url: "/projects/shrinkwrap",
       },
       {
-        label: "2025 3044 Robot Code (Uses OxConfig)",
+        label: "Example Codebase",
         url: "https://github.com/frcteam3044/2025swervebase",
+      },
+      {
+        label: "Slideshow",
+        url: "https://docs.google.com/presentation/d/1QuVK_aaOHk0eIedKAgRVHNj8FFaLIJ0PjUWnntIh-NE/",
+      },
+      {
+        label: "Wiki",
+        url: "https://github.com/FRCTeam3044/OxConfig/wiki",
+      },
+      {
+        label: "JavaDoc",
+        url: "https://frcteam3044.github.io/OxConfig/",
+      },
+      {
+        label: "Discord",
+        url: "https://discord.com/invite/ypRWZGnW66",
       },
     ],
     id: "oxconfig",
@@ -283,5 +316,30 @@ export const miniProjects: Project[] = shuffleArray([
       },
     ],
     id: "gearglimpse",
+  },
+  {
+    name: "Portfolio",
+    id: "portfolio",
+    images: ["portfolio.webp", "portfolio2.webp"],
+    short: "Website-ception!",
+    long: "My attempt at a stylish portfolio website. I probably could've achieved a better result with existing templates, but I felt that as a developer, there was no option but to make my own.",
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/nab138/nabdev",
+      },
+      {
+        label: "Live Demo (you are here!)",
+        url: "https://nabdev.me",
+      },
+    ],
+    points: [
+      "Responsive design",
+      "Completely custom design",
+      "Puts projects front and center with images everywhere",
+      "It's the site you're on right now!",
+    ],
+    pointsTitle: "Features",
+    techStack: ["TypeScript", "React", "Vite"],
   },
 ]);

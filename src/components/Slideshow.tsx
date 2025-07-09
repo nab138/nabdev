@@ -62,6 +62,22 @@ export default function Slideshow({
     });
   }, [isAnimating, curSlide]);
 
+  const toPrev = useCallback(() => {
+    if (isAnimating) return;
+    setDirection("left");
+    setPrevSlide(curSlide);
+    setCurSlide((old) => {
+      const prev = (old - 1 + slides.length) % slides.length;
+      setIsAnimating(true);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => {
+        setPrevSlide(null);
+        setIsAnimating(false);
+      }, 500);
+      return prev;
+    });
+  }, [isAnimating, curSlide]);
+
   useEffect(() => {
     if (slides.length <= 1) return;
     const slideChange = setInterval(toNext, autoSwitchTime);
@@ -86,6 +102,28 @@ export default function Slideshow({
           loading={index === curSlide ? "eager" : "lazy"}
         />
 
+        {!isBackground && (
+          <div
+            onClick={toPrev}
+            className={
+              "slide-control slide-prev" +
+              (isAnimating ? " slide-control-disabled" : "")
+            }
+          >
+            &lt;
+          </div>
+        )}
+        {!isBackground && (
+          <div
+            onClick={toNext}
+            className={
+              "slide-control slide-next" +
+              (isAnimating ? " slide-control-disabled" : "")
+            }
+          >
+            &gt;
+          </div>
+        )}
         {slides[index].name && (
           <div
             className="slide-info-box"

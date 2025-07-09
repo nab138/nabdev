@@ -40,9 +40,6 @@ export default function Header({
         <Logo
           className="logo-img"
           onClick={() => {
-            (isMain ? containerRef2 : containerRef).current?.classList.add(
-              "invisible"
-            );
             transition("/", realContainerRef, navigate, location);
           }}
         />

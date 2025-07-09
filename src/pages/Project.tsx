@@ -98,7 +98,6 @@ export default function Project() {
                   key={link.url}
                   href={link.url}
                   target="_blank"
-                  rel="noreferrer"
                   className="link-btn"
                 >
                   {link.label}
