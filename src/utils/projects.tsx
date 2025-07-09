@@ -382,4 +382,22 @@ export const miniProjects: Project[] = shuffleArray([
     pointsTitle: "Features",
     techStack: ["TypeScript", "React", "Vite"],
   },
+  {
+    name: "NetworkTablesSharp",
+    id: "networktables-sharp",
+    images: ["networktables-sharp.webp"],
+    short: "A C# library for NetworkTables 4.0",
+    long: "As far as I know, the first C# implementation of NetworkTables 4.0. It was originally made for unity but was later converted into a NuGet package for use in any .NET project.",
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/nab138/NetworkTablesSharp",
+      },
+      {
+        label: "NuGet",
+        url: "https://www.nuget.org/packages/NetworkTablesSharp",
+      },
+    ],
+    techStack: ["C#"],
+  },
 ]);
