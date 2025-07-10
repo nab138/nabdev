@@ -102,7 +102,7 @@ export default function Slideshow({
           loading={index === curSlide ? "eager" : "lazy"}
         />
 
-        {!isBackground && (
+        {!isBackground && slides.length > 1 && (
           <div
             onClick={toPrev}
             className={
@@ -113,7 +113,7 @@ export default function Slideshow({
             &lt;
           </div>
         )}
-        {!isBackground && (
+        {!isBackground && slides.length > 1 && (
           <div
             onClick={toNext}
             className={
