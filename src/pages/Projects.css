@@ -79,7 +79,7 @@
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgb(69.4117647059, 69.4117647059, 69.4117647059);
   z-index: 100;
-  filter: blur(4px) brightness(0.94);
+  filter: blur(4px) brightness(0.94) grayscale(0.45);
 }
 
 .project-fs-img {
