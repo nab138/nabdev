@@ -16,3 +16,8 @@
   flex-grow: 1;
   margin: 0.5rem;
 }
+
+.contact-list a {
+  color: #77f0ff;
+  text-decoration: underline;
+}
