@@ -245,13 +245,14 @@ export const mainProjects: Project[] = shuffleArray([
       "Multi-platform support (Windows, Linux, and maybe mac in the future)",
       "Supports logging in with your Apple ID to sign apps",
       "Lets you view and manage certificates and app IDs",
-      "Supports building and installing apps on your device with completely rust sideloading code",
+      "Supports building and installing apps on your device",
+      "Custom sideloading library written in Rust (isideload)",
       "Supports the swift package manager",
       "Uses monaco editor for code editing",
       "SourceKit LSP integration for error reporting, autocomplete, etc",
       "View your iDevice's syslog for debugging",
       "Project templates",
-      "Dark and Light Mode",
+      "Dark and light mode",
       "Much more!",
     ],
     techStack: [
@@ -267,6 +268,10 @@ export const mainProjects: Project[] = shuffleArray([
       {
         label: "GitHub",
         url: "https://github.com/nab138/YCode",
+      },
+      {
+        label: "isideload GitHub",
+        url: "https://github.com/nab138/isideload",
       },
     ],
   },
