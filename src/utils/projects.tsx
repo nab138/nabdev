@@ -237,13 +237,7 @@ export const mainProjects: Project[] = shuffleArray([
   {
     name: "CrossCode",
     id: "crosscode",
-    images: [
-      "ycode0.webp",
-      "ycode1.webp",
-      "ycode2.webp",
-      "ycode3.webp",
-      "ycode4.webp",
-    ],
+    images: ["crosscode0.webp", "crosscode1.webp", "crosscode2.webp"],
     short: "An iOS IDE for windows and linux",
     long: "XCode is only available for mac, but I can't afford one. So I made my own. CrossCode aims to make developing native iOS apps easy on any platform. It is still very early in development but does have it's core functionality working.",
     pointsTitle: "Features",
