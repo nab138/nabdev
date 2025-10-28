@@ -1,5 +1,3 @@
-import { shuffleArray } from "./utils";
-
 export type Project = {
   name: string;
   short: string;
@@ -15,39 +13,47 @@ export type Project = {
   id: string;
 };
 
-export const mainProjects: Project[] = shuffleArray([
+export const mainProjects: Project[] = [
   {
-    name: "Shrinkwrap",
-    short: "Multipurpose app for FRC robotics",
-    long: "Shrinkwrap is a cross-platform diagnostic, configuration, and tuning utility for FRC robotics. While it provides a few generic features, it contains mostly specialized tools for specific softwares.",
+    name: "CrossCode",
+    id: "crosscode",
+    images: ["crosscode0.webp", "crosscode1.webp", "crosscode2.webp"],
+    short: "An iOS IDE for windows and linux",
+    long: "XCode is only available for mac, but I can't afford one. So I made my own. CrossCode aims to make developing native iOS apps easy on any platform. It is still very early in development but does have it's core functionality working.",
+    pointsTitle: "Features",
     points: [
-      "Supports Windows, macOS, Linux, iOS, and Android",
-      "Fully configurable and exportable docking layout",
-      "Connect to a robot in real time or load a log file",
-      "Visualize data on a 2D or 3D field",
-      "Tune OxConfig parameters and controllers live",
-      "Visualize Oxidation state machine",
+      "Multi-platform support (Windows, Linux, and maybe mac in the future)",
+      "Supports logging in with your Apple ID to sign apps",
+      "Lets you view and manage certificates and app IDs",
+      "Supports building and installing apps on your device",
+      "Custom sideloading library written in Rust (isideload)",
+      "Supports the swift package manager",
+      "Uses monaco editor for code editing",
+      "SourceKit LSP integration for error reporting, autocomplete, etc",
+      "View your iDevice's syslog for debugging",
+      "Project templates",
+      "Dark and light mode",
       "Much more!",
     ],
-    pointsTitle: "Features",
-    techStack: ["Bun", "Vite", "Rust", "Tauri", "TypeScript", "React"],
-    images: ["shrinkwrap.webp", "shrinkwrap2.webp", "shrinkwrap3.webp"],
+    techStack: [
+      "Bun",
+      "TypeScript",
+      "React",
+      "Vite",
+      "Joy UI",
+      "Rust",
+      "Swift",
+    ],
     links: [
       {
         label: "GitHub",
-        url: "https://github.com/nab138/shrinkwrap",
+        url: "https://github.com/nab138/YCode",
       },
       {
-        label: "OxConfig",
-        url: "/projects/oxconfig",
-      },
-      {
-        label: "Oxidation",
-        url: "/projects/oxidation",
+        label: "isideload GitHub",
+        url: "https://github.com/nab138/isideload",
       },
     ],
-
-    id: "shrinkwrap",
   },
   {
     name: "Oxplorer",
@@ -84,6 +90,39 @@ export const mainProjects: Project[] = shuffleArray([
       },
     ],
     id: "oxplorer",
+  },
+  {
+    name: "Shrinkwrap",
+    short: "Multipurpose app for FRC robotics",
+    long: "Shrinkwrap is a cross-platform diagnostic, configuration, and tuning utility for FRC robotics. While it provides a few generic features, it contains mostly specialized tools for specific softwares.",
+    points: [
+      "Supports Windows, macOS, Linux, iOS, and Android",
+      "Fully configurable and exportable docking layout",
+      "Connect to a robot in real time or load a log file",
+      "Visualize data on a 2D or 3D field",
+      "Tune OxConfig parameters and controllers live",
+      "Visualize Oxidation state machine",
+      "Much more!",
+    ],
+    pointsTitle: "Features",
+    techStack: ["Bun", "Vite", "Rust", "Tauri", "TypeScript", "React"],
+    images: ["shrinkwrap.webp", "shrinkwrap2.webp", "shrinkwrap3.webp"],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/nab138/shrinkwrap",
+      },
+      {
+        label: "OxConfig",
+        url: "/projects/oxconfig",
+      },
+      {
+        label: "Oxidation",
+        url: "/projects/oxidation",
+      },
+    ],
+
+    id: "shrinkwrap",
   },
   {
     name: "Java Course",
@@ -234,50 +273,9 @@ export const mainProjects: Project[] = shuffleArray([
     ],
     id: "oxconfig",
   },
-  {
-    name: "CrossCode",
-    id: "crosscode",
-    images: ["crosscode0.webp", "crosscode1.webp", "crosscode2.webp"],
-    short: "An iOS IDE for windows and linux",
-    long: "XCode is only available for mac, but I can't afford one. So I made my own. CrossCode aims to make developing native iOS apps easy on any platform. It is still very early in development but does have it's core functionality working.",
-    pointsTitle: "Features",
-    points: [
-      "Multi-platform support (Windows, Linux, and maybe mac in the future)",
-      "Supports logging in with your Apple ID to sign apps",
-      "Lets you view and manage certificates and app IDs",
-      "Supports building and installing apps on your device",
-      "Custom sideloading library written in Rust (isideload)",
-      "Supports the swift package manager",
-      "Uses monaco editor for code editing",
-      "SourceKit LSP integration for error reporting, autocomplete, etc",
-      "View your iDevice's syslog for debugging",
-      "Project templates",
-      "Dark and light mode",
-      "Much more!",
-    ],
-    techStack: [
-      "Bun",
-      "TypeScript",
-      "React",
-      "Vite",
-      "Joy UI",
-      "Rust",
-      "Swift",
-    ],
-    links: [
-      {
-        label: "GitHub",
-        url: "https://github.com/nab138/YCode",
-      },
-      {
-        label: "isideload GitHub",
-        url: "https://github.com/nab138/isideload",
-      },
-    ],
-  },
-]);
+];
 
-export const miniProjects: Project[] = shuffleArray([
+export const miniProjects: Project[] = [
   {
     name: "Apple Music Frontend",
     short: "Alternative Apple Music web frontend",
@@ -401,4 +399,4 @@ export const miniProjects: Project[] = shuffleArray([
     ],
     techStack: ["C#"],
   },
-]);
+];

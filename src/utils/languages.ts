@@ -1,5 +1,3 @@
-import { shuffleArray } from "./utils";
-
 const languages = [
   "TypeScript",
   "Java",
@@ -15,3 +13,7 @@ const languages = [
 ];
 
 export default shuffleArray(languages);
+
+export function shuffleArray<T>(array: T[]): T[] {
+  return array.sort(() => Math.random() - 0.5);
+}

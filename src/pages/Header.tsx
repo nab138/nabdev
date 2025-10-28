@@ -17,7 +17,7 @@ export default function Header({
   const isMain = ["/", "/about", "/contact"].includes(location.pathname);
   const realContainerRef = isMain ? containerRef : containerRef2;
 
-  const [modalOpen, setModalOpen] = useState(false);
+  const [_modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     const firstVisit = localStorage.getItem("firstVisit");
@@ -44,7 +44,7 @@ export default function Header({
           }}
         />
       </div>
-      {modalOpen && (
+      {/* {modalOpen && (
         <div className="welcome-modal">
           <div className="welcome-modal-content">
             <h2>⚠️ Under Construction!</h2>
@@ -56,7 +56,7 @@ export default function Header({
             <button onClick={() => setModalOpen(false)}>I understand</button>
           </div>
         </div>
-      )}
+      )} */}
       {children}
     </>
   );

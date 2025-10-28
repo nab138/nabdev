@@ -27,7 +27,7 @@ export default function Home() {
           content="Learn more about Nicholas Sharp, his background, and skills."
         />
       </Helmet>
-      <h1 className="logo">nabdev</h1>
+      <h2 className="logo">Nicholas Sharp</h2>
       <Typewriter options={languages} />
       <div className="home-button-container">
         <button onClick={() => navigate("/about")} className="link-btn">
