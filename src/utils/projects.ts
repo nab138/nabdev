@@ -42,16 +42,55 @@ export const mainProjects: Project[] = [
       "Vite",
       "Joy UI",
       "Rust",
+      "Tauri",
       "Swift",
     ],
     links: [
       {
+        label: "Download",
+        url: "https://github.com/nab138/CrossCode/releases",
+      },
+      {
         label: "GitHub",
-        url: "https://github.com/nab138/YCode",
+        url: "https://github.com/nab138/CrossCode",
       },
       {
         label: "isideload GitHub",
         url: "https://github.com/nab138/isideload",
+      },
+    ],
+  },
+  {
+    name: "iloader",
+    id: "iloader",
+    short: "A user-friendly iOS sideloader",
+    long: "Setting up SideStore on iOS is a pain. It involves different apps depending on your PCs OS, requires users to install a multitude of apps on their PC, and is very error prone. After making isideload for CrossCode, I decided to use it to make an easy-to-use iOS sideloader that's as streamlined as possible.",
+    pointsTitle: "Features",
+    points: [
+      "Automatically install SideStore & Place pairing file",
+      "Install any .IPA app",
+      "Manage Certificates and App IDs",
+      "Place pairing files into known apps that use them (e.g. SideStore, StikDebug)",
+      "Easily save & switch between multiple Apple IDs",
+    ],
+    techStack: ["Bun", "TypeScript", "React", "Vite", "Rust", "Tauri"],
+    images: ["iloader0.webp", "iloader1.webp", "iloader2.webp"],
+    links: [
+      {
+        label: "Download",
+        url: "https://github.com/nab138/iloader/releases",
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/nab138/iloader",
+      },
+      {
+        label: "isideload GitHub",
+        url: "https://github.com/nab138/isideload",
+      },
+      {
+        label: "CrossCode",
+        url: "/projects/crosscode",
       },
     ],
   },
@@ -108,6 +147,10 @@ export const mainProjects: Project[] = [
     techStack: ["Bun", "Vite", "Rust", "Tauri", "TypeScript", "React"],
     images: ["shrinkwrap.webp", "shrinkwrap2.webp", "shrinkwrap3.webp"],
     links: [
+      {
+        label: "Download",
+        url: "https://github.com/nab138/shrinkwrap/releases",
+      },
       {
         label: "GitHub",
         url: "https://github.com/nab138/shrinkwrap",
@@ -190,12 +233,12 @@ export const mainProjects: Project[] = [
     ],
     links: [
       {
-        label: "Github",
-        url: "https://github.com/nab138/FreeTime",
-      },
-      {
         label: "Live Demo",
         url: "https://freetime.nabdev.me",
+      },
+      {
+        label: "Github",
+        url: "https://github.com/nab138/FreeTime",
       },
     ],
     id: "freetime",
@@ -290,12 +333,12 @@ export const miniProjects: Project[] = [
     images: ["apple-music.webp"],
     links: [
       {
-        label: "GitHub",
-        url: "https://github.com/nab138/apple-music",
-      },
-      {
         label: "Live Demo",
         url: "https://music.nabdev.me",
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/nab138/apple-music",
       },
     ],
 
@@ -364,12 +407,12 @@ export const miniProjects: Project[] = [
     long: "My attempt at a stylish portfolio website. I probably could've achieved a better result with existing templates, but I felt that as a developer, there was no option but to make my own.",
     links: [
       {
-        label: "GitHub",
-        url: "https://github.com/nab138/nabdev",
-      },
-      {
         label: "Live Demo (you are here!)",
         url: "https://nabdev.me",
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/nab138/nabdev",
       },
     ],
     points: [
@@ -389,12 +432,12 @@ export const miniProjects: Project[] = [
     long: "As far as I know, the first C# implementation of NetworkTables 4.0. It was originally made for unity but was later converted into a NuGet package for use in any .NET project.",
     links: [
       {
-        label: "GitHub",
-        url: "https://github.com/nab138/NetworkTablesSharp",
-      },
-      {
         label: "NuGet",
         url: "https://www.nuget.org/packages/NetworkTablesSharp",
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/nab138/NetworkTablesSharp",
       },
     ],
     techStack: ["C#"],
