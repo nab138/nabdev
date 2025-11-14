@@ -64,10 +64,10 @@ export const mainProjects: Project[] = [
     name: "iloader",
     id: "iloader",
     short: "A user-friendly iOS sideloader",
-    long: "Setting up SideStore on iOS is a pain. It involves different apps depending on your PCs OS, requires users to install a multitude of apps on their PC, and is very error prone. After making isideload for CrossCode, I decided to use it to make an easy-to-use iOS sideloader that's as streamlined as possible.",
+    long: "Setting up SideStore on iOS is a pain. It involves different apps depending on your PCs OS, requires users to install a multitude of apps on their PC, and is very error prone. After making isideload for CrossCode, I decided to use it to make an easy-to-use iOS sideloader that's as streamlined as possible. (Credit to StephenDev0 for improving the UI and Transistor for making the icon)",
     pointsTitle: "Features",
     points: [
-      "Automatically install SideStore & Place pairing file",
+      "Automatically install SideStore & place pairing file",
       "Install any .IPA app",
       "Manage Certificates and App IDs",
       "Place pairing files into known apps that use them (e.g. SideStore, StikDebug)",
