@@ -51,6 +51,10 @@ export const mainProjects: Project[] = [
         url: "https://github.com/nab138/CrossCode/releases",
       },
       {
+        label: "Demo Video",
+        url: "https://private-user-images.githubusercontent.com/56705177/492041383-9cbe2b71-d765-46c6-aa25-ef16b539deec.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjQzODEzNzMsIm5iZiI6MTc2NDM4MTA3MywicGF0aCI6Ii81NjcwNTE3Ny80OTIwNDEzODMtOWNiZTJiNzEtZDc2NS00NmM2LWFhMjUtZWYxNmI1MzlkZWVjLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTI5VDAxNTExM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFhNGFkMzc5ZjliN2E1ZjI4MzA1MDY4Zjg3NDdlMTk0MWQxNWE1ODlkYmUyYWZhMjM1YzJjZjQxOThjYmJiYTImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.WsmstJLYSy6RWnBQqT_XI6dYPVi7Tm6ri1it9PRK4ag",
+      },
+      {
         label: "GitHub",
         url: "https://github.com/nab138/CrossCode",
       },
@@ -64,14 +68,15 @@ export const mainProjects: Project[] = [
     name: "iloader",
     id: "iloader",
     short: "A user-friendly iOS sideloader",
-    long: "Setting up SideStore on iOS is a pain. It involves different apps depending on your PCs OS, requires users to install a multitude of apps on their PC, and is very error prone. After making isideload for CrossCode, I decided to use it to make an easy-to-use iOS sideloader that's as streamlined as possible. (Credit to StephenDev0 for improving the UI and Transistor for making the icon)",
+    long: "Setting up SideStore on iOS is a pain. It involves different apps depending on your PCs OS, requires users to install a multitude of apps on their PC, and is very error prone. After making isideload for CrossCode, I decided to use it to make an easy-to-use iOS sideloader that's as streamlined as possible. It is now the official way to install SideStore. (Credit to StephenDev0 for improving the UI and Transistor for making the icon)",
     pointsTitle: "Features",
     points: [
-      "Automatically install SideStore & place pairing file",
+      "The offical way to install SideStore",
+      "Automatically install SideStore (or LiveContainer+SideStore) and import the certificate and pairing file",
       "Install any .IPA app",
       "Manage Certificates and App IDs",
-      "Place pairing files into known apps that use them (e.g. SideStore, StikDebug)",
-      "Easily save & switch between multiple Apple IDs",
+      "Place pairing files into several apps (e.g. SideStore, StikDebug)",
+      "Save & switch between multiple Apple IDs",
     ],
     techStack: ["Bun", "TypeScript", "React", "Vite", "Rust", "Tauri"],
     images: ["iloader0.webp", "iloader1.webp", "iloader2.webp"],
@@ -87,6 +92,10 @@ export const mainProjects: Project[] = [
       {
         label: "isideload GitHub",
         url: "https://github.com/nab138/isideload",
+      },
+      {
+        label: "SideStore Installation Instructions",
+        url: "https://docs.sidestore.io/docs/installation/prerequisites",
       },
       {
         label: "CrossCode",
