@@ -82,6 +82,10 @@ export const mainProjects: Project[] = [
     images: ["iloader0.webp", "iloader1.webp", "iloader2.webp"],
     links: [
       {
+        label: "Website",
+        url: "https://iloader.app",
+      },
+      {
         label: "Download",
         url: "https://github.com/nab138/iloader/releases",
       },
@@ -94,7 +98,7 @@ export const mainProjects: Project[] = [
         url: "https://github.com/nab138/isideload",
       },
       {
-        label: "SideStore Installation Instructions",
+        label: "SideStore Instructions",
         url: "https://docs.sidestore.io/docs/installation/prerequisites",
       },
       {
