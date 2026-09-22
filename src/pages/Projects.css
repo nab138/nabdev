@@ -5,7 +5,7 @@
 }
 
 .projects-header {
-  margin-left: 6rem;
+  margin-left: 5rem;
 }
 .projects-header h1 {
   margin-top: 1.5rem;
@@ -29,7 +29,9 @@
   border-radius: 0.5rem;
   background-color: #201c1c;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   user-select: none;
   flex: 1 1 0px;
   overflow: hidden;

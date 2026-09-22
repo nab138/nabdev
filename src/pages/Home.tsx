@@ -18,13 +18,13 @@ export default function Home() {
         <title>Home - nabdev</title>
         <meta
           name="description"
-          content="Learn more about Nicholas Sharp, his background, and skills."
+          content="Learn more about me, my background, and my skills."
         />
         <meta property="og:url" content="https://nabdev.me" />
         <meta property="og:title" content="Home - nabdev" />
         <meta
           property="og:description"
-          content="Learn more about Nicholas Sharp, his background, and skills."
+          content="Learn more about me, my background, and my skills."
         />
       </Helmet>
       <h2 className="logo">Nicholas Sharp</h2>

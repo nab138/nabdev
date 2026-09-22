@@ -52,7 +52,7 @@ export const mainProjects: Project[] = [
       },
       {
         label: "Demo Video",
-        url: "https://private-user-images.githubusercontent.com/56705177/492041383-9cbe2b71-d765-46c6-aa25-ef16b539deec.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjQzODEzNzMsIm5iZiI6MTc2NDM4MTA3MywicGF0aCI6Ii81NjcwNTE3Ny80OTIwNDEzODMtOWNiZTJiNzEtZDc2NS00NmM2LWFhMjUtZWYxNmI1MzlkZWVjLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTI5VDAxNTExM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFhNGFkMzc5ZjliN2E1ZjI4MzA1MDY4Zjg3NDdlMTk0MWQxNWE1ODlkYmUyYWZhMjM1YzJjZjQxOThjYmJiYTImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.WsmstJLYSy6RWnBQqT_XI6dYPVi7Tm6ri1it9PRK4ag",
+        url: "https://nabdev.me/crosscode-demo.mp4",
       },
       {
         label: "GitHub",
@@ -345,10 +345,11 @@ export const miniProjects: Project[] = [
     techStack: ["Bun", "Vite", "TypeScript", "React"],
     images: ["apple-music.webp"],
     links: [
-      {
-        label: "Live Demo",
-        url: "https://music.nabdev.me",
-      },
+      // apple changed musickit and it's broken :(
+      // {
+      //   label: "Live Demo",
+      //   url: "https://music.nabdev.me",
+      // },
       {
         label: "GitHub",
         url: "https://github.com/nab138/apple-music",
