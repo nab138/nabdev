@@ -32,7 +32,7 @@ export default function Projects() {
   }, [finishTransition]);
 
   useEffect(() => {
-    if (transitionProject && !isMini) {
+    if (transitionProject && !isMini && !isRobotics) {
       setAnimating(true);
       setHideOverlay(false);
       setFsStyle({});

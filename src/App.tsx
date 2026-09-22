@@ -28,7 +28,7 @@ function App() {
           <Route path="/projects/:projectId" element={<Project />} />
           <Route path="/mini-projects" element={<Projects key={"mini"} />} />
           <Route path="/mini-projects/:projectId" element={<Project />} />
-          <Route path="/robotics" element={<Projects />} />
+          <Route path="/robotics" element={<Projects key={"robotics"} />} />
           <Route path="/robotics/:projectId" element={<Project />} />
         </Route>
         <Route path="*" element={<NotFound />} />
