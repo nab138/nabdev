@@ -52,7 +52,7 @@ export const mainProjects: Project[] = [
       },
       {
         label: "Demo Video",
-        url: "https://nabdev.me/crosscode-demo.mp4",
+        url: "https://nabdev.me/crosscodedemo.mp4",
       },
       {
         label: "GitHub",
