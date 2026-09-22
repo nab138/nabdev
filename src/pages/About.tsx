@@ -51,19 +51,16 @@ export default function About() {
         <h2>About Me</h2>
         <h1>Hi, I'm Nick.</h1>
         <p>
-          I'm a high school student who loves working on various software
-          development projects.
+          I'm a student interested in software development, embedded systems,
+          and computers in general.
         </p>
         <ul className="about-list">
+          <li>RPI Class of 2030, Computer & Systems Engineering.</li>
           <li>
-            I work on projects, tools, and educational resources to support my
-            FRC robotics team, 3044
+            I build apps, websites, and other utilities with an emphasis on
+            accessibility and user-friendliness.
           </li>
-          <li>
-            I build mobile apps, websites, and other utilities to serve a
-            purpose for myself and others
-          </li>
-          <li>I make silly things for fun ;)</li>
+          <li>Ex-FRC (Team 3044)</li>
         </ul>
         <div className="about-buttons">
           <button onClick={() => navigate("/")} className="link-btn">
