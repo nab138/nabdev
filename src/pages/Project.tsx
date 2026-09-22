@@ -12,13 +12,16 @@ export default function Project() {
   const params = useParams();
   const { navigate, finishTransition } = useTransitionNav();
   const isMini = location.pathname.includes("mini-projects");
+  const isRobotics = !isMini && location.pathname.includes("robotics");
   const project = (isMini ? miniProjects : mainProjects).find(
-    (p) => p.id === params.projectId
+    (p) => p.id === params.projectId,
   );
 
   useEffect(() => {
     if (!project) {
-      navigate("/projects/");
+      navigate(
+        isMini ? "/mini-projects/" : isRobotics ? "/robotics/" : "/projects/",
+      );
     }
   }, [project, navigate]);
 
@@ -40,7 +43,7 @@ export default function Project() {
         />
         <meta
           property="og:url"
-          content={`https://nabdev.me/${isMini ? "mini-" : ""}projects/${
+          content={`https://nabdev.me/${isRobotics ? "robotics/" : isMini ? "mini-projects/" : "projects/"}${
             project.id
           }`}
         />
@@ -54,9 +57,17 @@ export default function Project() {
         <h1>{project?.name}</h1>
         <button
           className="link"
-          onClick={() => navigate(isMini ? "/mini-projects" : "/projects")}
+          onClick={() =>
+            navigate(
+              isMini
+                ? "/mini-projects/"
+                : isRobotics
+                  ? "/robotics/"
+                  : "/projects/",
+            )
+          }
         >
-          <h2>{isMini ? "Mini" : "All"} Projects</h2>
+          <h2>{isRobotics ? "Robotics" : isMini ? "Mini" : "All"} Projects</h2>
         </button>
       </div>
       <div className="project-content">

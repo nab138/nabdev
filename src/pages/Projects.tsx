@@ -9,7 +9,12 @@ export default function Projects() {
   const location = useLocation();
 
   const isMini = location.pathname.includes("mini-projects");
-  const projects = isMini ? miniProjects : mainProjects;
+  const isRobotics = !isMini && location.pathname.includes("robotics");
+  const projects = isMini
+    ? miniProjects
+    : isRobotics
+      ? mainProjects.filter((p) => p.robotics)
+      : mainProjects;
   const [animating, setAnimating] = useState(false);
   const [hideOverlay, setHideOverlay] = useState(false);
   const [fsStyle, setFsStyle] = useState<any>({});
@@ -64,19 +69,19 @@ export default function Projects() {
         <title>{isMini ? "Mini " : ""}Projects - nabdev</title>
         <meta
           name="description"
-          content="Explore Nick's various projects, including pictures, descriptions, and links to live demos or source code."
+          content="Explore my various projects, including pictures, descriptions, and links to live demos or source code."
         />
         <meta
           property="og:url"
-          content={`https://nabdev.me/${isMini ? "mini-" : ""}projects`}
+          content={`https://nabdev.me/${isRobotics ? "robotics/" : isMini ? "mini-projects/" : "projects/"}`}
         />
         <meta
           property="og:title"
-          content={`${isMini ? "Mini " : ""}Projects - nabdev`}
+          content={`${isRobotics ? "Robotics " : isMini ? "Mini " : ""}Projects - nabdev`}
         />
         <meta
           property="og:description"
-          content="Explore Nick's various projects, including pictures, descriptions, and links to live demos or source code."
+          content="Explore my various projects, including pictures, descriptions, and links to live demos or source code."
         />
       </Helmet>
       {transitionProject && !hideOverlay && (
@@ -93,7 +98,7 @@ export default function Projects() {
         </div>
       )}
       <div className="projects-header">
-        <h1>{isMini ? "Mini" : "My"} Projects</h1>
+        <h1>{isRobotics ? "Robotics" : isMini ? "Mini" : "My"} Projects</h1>
         <button className="link" onClick={() => navigate("/")}>
           <h2>Back to home</h2>
         </button>
@@ -116,7 +121,11 @@ export default function Projects() {
             }
             onClick={() => {
               navigate(
-                (isMini ? "/mini-projects/" : "/projects/") + project.id
+                (isMini
+                  ? "/mini-projects/"
+                  : isRobotics
+                    ? "/robotics/"
+                    : "/projects/") + project.id,
               );
             }}
           >
@@ -135,15 +144,17 @@ export default function Projects() {
         <div
           className={`project-card`}
           onClick={() => {
-            navigate(`/${isMini ? "projects" : "mini-projects"}`);
+            navigate(`/${isRobotics || isMini ? "projects" : "mini-projects"}`);
           }}
         >
           <div className="mini-projects">
-            <h1>{isMini ? "Main" : "Mini"} Projects</h1>
+            <h1>{isRobotics || isMini ? "Main" : "Mini"} Projects</h1>
             <h2>
-              {isMini
-                ? "See some larger, high effort projects with a greater degree of polish"
-                : "See some small, fun, or unfinished projects that didn't quite make the main cut"}
+              {isRobotics
+                ? "See all projects, including robotics and non-robotics"
+                : isMini
+                  ? "See some larger, high effort projects with a greater degree of polish"
+                  : "See some small, fun, or unfinished projects that didn't quite make the main cut"}
             </h2>
           </div>
         </div>

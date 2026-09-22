@@ -11,6 +11,7 @@ export type Project = {
     url: string;
   }[];
   id: string;
+  robotics?: boolean;
 };
 
 export const mainProjects: Project[] = [
@@ -109,6 +110,7 @@ export const mainProjects: Project[] = [
   },
   {
     name: "Oxplorer",
+    robotics: true,
     short: "On-the-fly pathfinder for FRC robotics",
     long: "A versatile pathfinder for FRC robotics that enables real-time obstacle avoidance features and quick path generation.",
     pointsTitle: "Features",
@@ -145,6 +147,7 @@ export const mainProjects: Project[] = [
   },
   {
     name: "Shrinkwrap",
+    robotics: true,
     short: "Multipurpose app for FRC robotics",
     long: "Shrinkwrap is a cross-platform diagnostic, configuration, and tuning utility for FRC robotics. While it provides a few generic features, it contains mostly specialized tools for specific softwares.",
     points: [
@@ -258,6 +261,7 @@ export const mainProjects: Project[] = [
   },
   {
     name: "Oxidation",
+    robotics: true,
     short: "A WIP state machine library for automated FRC robot control",
     long: "Oxidation provides a high level abstraction for robot logic, allowing complex sequences of actions to be written in a simple decorator-based syntax. It sits on top of existing commands and subsystems and provides a way to orchestrate them in a cohesive manner.",
     pointsTitle: "Features",
@@ -286,6 +290,7 @@ export const mainProjects: Project[] = [
   },
   {
     name: "OxConfig",
+    robotics: true,
     short: "Real-time configuration and tuning for FRC robots",
     long: "OxConfig is a real-time configuration and tuning utility for FRC robots. It allows users to configure and tune various parameters of their robot in real-time without having to redeploy code.",
     pointsTitle: "Features",
